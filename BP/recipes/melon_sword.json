@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vsconw:melon_sword"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " G ",
+      " G ",
+      " S "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:melon"
+      },
+      "S": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "vsconw:melon_sword",
+      "count": 1
+    }
+  }
+}
