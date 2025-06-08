@@ -1,0 +1,28 @@
+name: Release Packs
+
+on:
+  push:
+    branches:
+      - main  
+    tags:
+      - 'v1.0.1' # タグ push 時のみ
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create mcaddon file
+        run: |
+          zip -r packs.mcaddon BP RP
+
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: packs.mcaddon
+          tag_name: v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
