@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:melon_sword",
+      "category": "Equipment",
+      "icon": {
+        "texture": "melon_sword"
+      }
+    },
+    "components": {
+      "minecraft:durability": {
+        "max_durability": 1
+      },
+      "minecraft:damage": 30,
+      "minecraft:hand_equipped": true,
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.sword"
+      }
+    }
+  }
+}
