@@ -5,7 +5,7 @@ on:
     branches:
       - main  
     tags:
-      - 'v1.0.1' # タグ push 時のみ
+      - 'v1.0.0' # タグ push 時のみ
 
 jobs:
   build-and-release:
