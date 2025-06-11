@@ -2,7 +2,7 @@ import { world, system } from "@minecraft/server";
 
 // 武器ごとのクールダウン設定（秒 → tick単位）
 const weaponCooldowns = {
-  "yourpack:blacksteel_greatblade": 20, // 1秒（20tick）
+  "vsconw:blacksteel_greatblade": 20, // 1秒（20tick）
   // 例: "yourpack:super_fast_dagger": 5, // 0.25秒
 };
 
