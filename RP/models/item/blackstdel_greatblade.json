@@ -3,9 +3,9 @@
   "minecraft:geometry": [
     {
       "description": {
-        "identifier": "yourpack:blacksteel_greatblade_geo",
-        "texture_width": 64,
-        "texture_height": 64,
+        "identifier": "vsconw:blacksteel_greatblade_geo",
+        "texture_width": 128,
+        "texture_height": 128,
         "visible_bounds_width": 3,
         "visible_bounds_height": 3,
         "visible_bounds_offset": [0, 0, 0]
