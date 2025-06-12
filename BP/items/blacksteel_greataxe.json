@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.81",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vscow:blacksteel_greatblade",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:damage": 1561,
+      "minecraft:weapon": {
+        "damage": 22
+      },
+      "minecraft:display_name": {
+        "value": "§0黒鋼の大斧"
+      }
+    }
+  }
+}
