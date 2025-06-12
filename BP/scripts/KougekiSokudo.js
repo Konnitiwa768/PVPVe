@@ -4,6 +4,7 @@ import { world, system } from "@minecraft/server";
 const weaponCooldowns = {
   "vsconw:blacksteel_greatblade": 20, // 1秒（20tick）
   "vsconw:blacksteel_greataxe": 36, // 1.8秒（20tick）
+  "vsconw:blacksteel_rapier": 10 // 0.5秒（10tick）
   // 例: "yourpack:super_fast_dagger": 5, // 0.25秒
 };
 
