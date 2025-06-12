@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vsconw:blacksteel_greatrapier"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " NN",
+      "NN",
+      "GS"
+    ],
+    "key": {
+      "N": {
+        "item": "minecraft:netherrite_ingot"
+      },
+      "S": {
+        "item": "minecraft:nether_star"
+      },
+      "G": {
+        "item": "minecraft:ghast_tear"
+      }
+    },
+    "result": {
+      "item": "vsconw:blacksteel_rapier",
+      "count": 1
+    }
+  }
+}
