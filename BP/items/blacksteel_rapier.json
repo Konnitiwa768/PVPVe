@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.81",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:blacksteel_rapier",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:damage": 1561,
+      "minecraft:weapon": {
+        "damage": 7
+      },
+      "minecraft:display_name": {
+        "value": "§0黒鋼のレイピア"
+      }
+    }
+  }
+}
