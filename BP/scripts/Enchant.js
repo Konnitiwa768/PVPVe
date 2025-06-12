@@ -29,22 +29,22 @@ system.runInterval(() => {
 
     for (const ench of enchantments) {
       const mat = items.find(e => e.getComponent("item")?.itemStack?.typeId === ench.material);
-      const tool = items.find(e => 
+      const tool = items.find(e =>
         e !== mat &&
-        e.getComponent("item")?.itemStack?.typeId.startsWith("minecraft:") &&
-        !ench.material.includes(e.getComponent("item")?.itemStack?.typeId)
+        e.getComponent("item")?.itemStack?.typeId !== ench.material
       );
 
       if (mat && tool) {
         const toolStack = tool.getComponent("item").itemStack;
-        const loreList = toolStack.getLore() ?? [];
+        const loreList = [...(toolStack.getLore() ?? [])];
         const count = loreList.filter(line => line.includes(ench.lore)).length;
         if (count >= 3) continue;
 
         loreList.push(`§7[${ench.lore}]`);
         toolStack.setLore(loreList);
         player.dimension.spawnItem(toolStack, player.location);
-        mat.kill(); tool.kill();
+        mat.kill();
+        tool.kill();
       }
     }
   }
@@ -142,7 +142,7 @@ world.afterEvents.entityHit.subscribe(event => {
 
   applyEffect("引き寄せ", c => {
     const pos = damagingEntity.location;
-    const hp = hitEntity.teleport(pos, { facingLocation: pos });
+    hitEntity.teleport(pos, { facingLocation: pos });
   });
 
   applyEffect("臨界爆発", c => {
