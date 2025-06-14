@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.81",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:red_sparkler_sword",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:damage": 1683,
+      "minecraft:weapon": {
+        "damage": 14
+      },
+      "minecraft:display_name": {
+        "value": "§0赤い花火の剣"
+      }
+    }
+  }
+}
