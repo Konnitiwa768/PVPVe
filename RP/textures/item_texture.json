@@ -1,0 +1,11 @@
+{
+  "resource_pack_name": "blacksteel_items",
+  "texture_name": "atlas.items",
+  "textures": {
+    "blacksteel_rapier": "textures/items/blacksteel_rapier",
+    "melon_sword": "textures/items/melon_sword",
+    "glass_sword": "textures/items/glass_sword",
+    "blacksteel_greataxe": "textures/items/blacksteel_greataxe",
+    "blacksteel_greatblade": "textures/items/blacksteel_greatblade"
+  }
+}
