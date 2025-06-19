@@ -6,6 +6,9 @@
       "category": "equipment"
     },
     "components": {
+      "minecraft:icon": {
+        "texture": "blacksteel_greatblade"
+      },
       "minecraft:damage": 1561,
       "minecraft:weapon": {
         "damage": 22
