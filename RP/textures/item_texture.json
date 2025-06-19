@@ -4,6 +4,7 @@
   "textures": {
     "blacksteel_rapier": "textures/items/blacksteel_rapier",
     "melon_sword": "textures/items/melon_sword",
+    "ration": "textures/items/ration",
     "glass_sword": "textures/items/glass_sword",
     "blacksteel_greataxe": "textures/items/blacksteel_greataxe",
     "blacksteel_greatblade": "textures/items/blacksteel_greatblade"
