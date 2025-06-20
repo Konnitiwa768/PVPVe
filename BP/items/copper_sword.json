@@ -1,0 +1,33 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:copper_sword",
+      "category": "Equipment",
+      "icon": {
+        "texture": "copper_sword"
+      }
+    },
+    "components": {
+      "minecraft:icon": "copper_sword",
+      "minecraft:display_name": {
+        "value": "§6どうの剣"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:damage": 6,
+      "minecraft:durability": {
+        "max_durability": 176
+      },
+      "minecraft:enchantable": {
+        "slot": "sword",
+        "value": 12
+      },
+      "minecraft:cooldown": {
+        "category": "sword",
+        "duration": 0.6
+      },
+      "minecraft:render_offsets": "tool"
+    }
+  }
+}
