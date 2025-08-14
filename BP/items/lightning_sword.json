@@ -1,0 +1,40 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:lightning_sword",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:durability": {
+        "max_durability": 1561
+      },
+      "minecraft:attack": {
+        "damage": 11.1
+      },
+      "minecraft:use_on": {
+        "on_use": [
+          {
+            "event": "vsconw:lightning_sword_hit"
+          }
+        ]
+      }
+    }
+  },
+  "events": {
+    "vsconw:lightning_sword_hit": {
+      "sequence": [
+        {
+          "run_command": {
+            "command": "/execute if random < 0.07 run summon creeper ~ ~ ~ {ExplosionRadius:4,CustomName:'\"UnstableCreeper\"',powered:0}"
+          }
+        },
+        {
+          "run_command": {
+            "command": "/execute if random < 0.48 run summon lightning_bolt ~ ~ ~"
+          }
+        }
+      ]
+    }
+  }
+}
