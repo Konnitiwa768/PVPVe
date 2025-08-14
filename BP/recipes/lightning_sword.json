@@ -12,7 +12,7 @@
     ],
     "key": {
       "G": {
-        "item": "minecraft:red_stone"
+        "item": "minecraft:redstone_block"
       },
       "S": {
         "item": "minecraft:netherite_scrap"
