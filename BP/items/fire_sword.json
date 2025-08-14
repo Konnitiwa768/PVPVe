@@ -1,0 +1,40 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:fire_sword",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:durability": {
+        "max_durability": 1882
+      },
+      "minecraft:attack": {
+        "damage": 7.25
+      },
+      "minecraft:use_on": {
+        "on_use": [
+          {
+            "event": "vsconw:fire_sword_hit"
+          }
+        ]
+      }
+    }
+  },
+  "events": {
+    "vsconw:fire_sword_hit": {
+      "sequence": [
+        {
+          "run_command": {
+            "command": "/effect @s weakness 3 1 true"
+          }
+        },
+        {
+          "run_command": {
+            "command": "/effect @s fire 3 0 true"
+          }
+        }
+      ]
+    }
+  }
+}
