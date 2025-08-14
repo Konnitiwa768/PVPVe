@@ -1,0 +1,17 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:enchantment": {
+    "description": {
+      "identifier": "vsconw:mizuwatari",
+      "category": "armor_feet"
+    },
+    "components": {
+      "minecraft:enchantable": {
+        "value": 1,
+        "slots": ["feet"]
+      },
+      "minecraft:rarity": "rare",
+      "minecraft:max_level": 1
+    }
+  }
+}
