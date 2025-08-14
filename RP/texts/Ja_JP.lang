@@ -1,0 +1,14 @@
+# ja_jp.lang - Minecraft BE用
+
+# 黒鋼武器
+item.vsconw.blacksteel_rapier=黒鋼レイピア
+item.vsconw.blacksteel_greatblade=黒鋼グレートブレード
+item.vsconw.blacksteel_greataxe=黒鋼グレートアックス
+
+# 属性剣
+item.vsconw.fire_sword=ファイアソード
+item.vsconw.ice_sword=アイスソード
+item.vsconw.lightning_sword=ライトニングソード
+
+# エンチャント / 効果
+enchantment.vsconw.mizuwatari=水上渡り
