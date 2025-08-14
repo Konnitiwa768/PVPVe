@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vsconw:mizuwatari_event"
+    },
+    "events": {
+      "vsconw:mizuwatari": {
+        "sequence": [
+          {
+            "condition": "query.is_in_water",
+            "event": "vsconw:mizuwatari:float"
+          }
+        ]
+      },
+      "vsconw:mizuwatari:float": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": "tp @s ~ ~0.1 ~",
+              "target": "self"
+            }
+          },
+          {
+            "add_effect": {
+              "effect": "speed",
+              "amplifier": 1,
+              "duration": 1,
+              "show_particles": false
+            }
+          }
+        ]
+      }
+    }
+  }
+}
