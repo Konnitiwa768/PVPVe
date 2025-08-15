@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:poison_sword",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:durability": {
+        "max_durability": 551
+      },
+      "minecraft:attack": {
+        "damage": 4
+      },
+      "minecraft:use_on": {
+        "on_use": [
+          {
+            "event": "vsconw:poison_sword_hit"
+          }
+        ]
+      }
+    }
+  },
+  "events": {
+    "vsconw:poison_sword_hit": {
+      "run_command": {
+        "command": "/effect @s poison 30 4 true"
+      }
+    }
+  }
+}
