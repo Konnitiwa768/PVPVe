@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:saber",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:durability": {
+        "max_durability": 892
+      },
+      "minecraft:attack": {
+        "damage": 7
+      },
+      "minecraft:cooldown": {
+        "category": "melee",
+        "duration": 0.3
+      }
+    },
+    "events": {
+      "minecraft:equipped": {
+        "run_command": {
+          "command": "/effect @s speed 999999 1 true"
+        }
+      },
+      "minecraft:unequipped": {
+        "run_command": {
+          "command": "/effect @s clear speed"
+        }
+      }
+    }
+  }
+}
