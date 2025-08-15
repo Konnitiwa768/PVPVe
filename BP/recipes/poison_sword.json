@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vsconw:poison_sword"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " G ",
+      "SGS",
+      " S "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:spider_eye"
+      },
+      "S": {
+        "item": "minecraft:obsidian"
+      }
+    },
+    "result": {
+      "item": "vsconw:poison_sword",
+      "count": 1
+    }
+  }
+}
