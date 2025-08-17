@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vsconw:iron_scaffolding"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "I I",
+      " S ",
+      "I I"
+    ],
+    "key": {
+      "I": { "item": "minecraft:iron_ingot" },
+      "S": { "item": "minecraft:scaffolding" }
+    },
+    "result": {
+      "item": "vsconw:iron_scaffolding",
+      "count": 4
+    }
+  }
+}
