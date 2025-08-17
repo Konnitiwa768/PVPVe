@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:block": {
+    "description": {
+      "identifier": "vsconw:iron_scaffolding",
+      "category": "construction"
+    },
+    "components": {
+      "minecraft:destroy_time": 3.3,
+      "minecraft:explosion_resistance": 14,
+      "minecraft:map_color": "#a0a0a0",
+
+      // ===== scaffolding の動作を継承的に再現 =====
+      "minecraft:placement_filter": {
+        "conditions": [
+          { "allowed_faces": ["up", "side", "down"] }
+        ]
+      },
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+      "minecraft:scaffolding": {},
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      },
+
+      // 見た目
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "iron_scaffolding",
+          "render_method": "opaque"
+        }
+      }
+    }
+  }
+}
