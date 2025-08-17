@@ -4,6 +4,6 @@
   "padding": 8,
   "num_mip_levels": 4,
   "textures": {
-    "iron_scaffolding": "textures/blocks/iron_scaffolding"
+    "iron_scaffolding": "textures/block/iron_scaffolding"
   }
 }
