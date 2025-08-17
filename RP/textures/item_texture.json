@@ -2,16 +2,16 @@
   "resource_pack_name": "blacksteel_items",
   "texture_name": "atlas.items",
   "textures": {
-    "blacksteel_rapier": "textures/items/blacksteel_rapier",
-    "melon_sword": "textures/items/melon_sword",
-    "ration": "textures/items/ration",
-    "glass_sword": "textures/items/glass_sword",
-    "fire_sword": "textures/items/fire_sword",
-    "poison_sword": "textures/items/poison_sword",
-    "saber": "textures/items/saber",
-    "ice_sword": "textures/items/ice_sword",
-    "lightning_sword": "textures/items/lightning_sword",
-    "blacksteel_greataxe": "textures/items/blacksteel_greataxe",
-    "blacksteel_greatblade": "textures/items/blacksteel_greatblade"
+    "blacksteel_rapier": "textures/item/blacksteel_rapier",
+    "melon_sword": "textures/item/melon_sword",
+    "ration": "textures/item/ration",
+    "glass_sword": "textures/item/glass_sword",
+    "fire_sword": "textures/item/fire_sword",
+    "poison_sword": "textures/item/poison_sword",
+    "saber": "textures/item/saber",
+    "ice_sword": "textures/item/ice_sword",
+    "lightning_sword": "textures/item/lightning_sword",
+    "blacksteel_greataxe": "textures/item/blacksteel_greataxe",
+    "blacksteel_greatblade": "textures/item/blacksteel_greatblade"
   }
 }
