@@ -21,6 +21,8 @@ jobs:
 
       - name: Create Release and Upload Asset
         run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
           git add packs.mcaddon
           git pull
           git commit
