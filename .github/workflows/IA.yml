@@ -20,9 +20,9 @@ jobs:
           zip -r packs.mcaddon BP RP
 
       - name: Create Release and Upload Asset
-        uses: softprops/action-gh-release@v2
-        with:
-          files: packs.mcaddon
-          tag_name: v1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        run: |
+          git add packs.mcaddon
+          git pull
+          git commit
+          git push
+          
