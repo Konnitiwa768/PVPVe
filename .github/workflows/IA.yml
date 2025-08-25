@@ -25,6 +25,5 @@ jobs:
           git config --global user.name "Your Name"
           git add packs.mcaddon
           git pull
-          git commit -m
+          git commit -m "Add packs.mcaddon"
           git push
-          
