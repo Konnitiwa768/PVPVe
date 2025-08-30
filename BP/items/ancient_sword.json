@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:_ancient_sword",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:durability": {
+        "max_durability": 1172
+      },
+      "minecraft:attack": {
+        "damage": 7.5
+      },
+      "minecraft:attack_effect": {
+        "on_hit": [
+          {
+            "effect": "poison",
+            "chance": 0.5,
+            "duration": 10,
+            "amplifier": 4,
+            "show_particles": false
+          },
+          {
+            "effect": "weakness",
+            "chance": 0.22,
+            "duration": 5,
+            "amplifier": 255,
+            "show_particles": false
+          }
+        ]
+      }
+    }
+  }
+}
