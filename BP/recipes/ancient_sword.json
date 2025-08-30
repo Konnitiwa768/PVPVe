@@ -2,7 +2,7 @@
   "format_version": "1.20",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "vsconw:glass_sword"
+      "identifier": "vsconw:ancient_sword"
     },
     "tags": ["crafting_table"],
     "pattern": [
