@@ -12,30 +12,24 @@
       "minecraft:attack": {
         "damage": 5.5
       },
-      "minecraft:use_on": {
-        "on_use": [
+      "minecraft:attack_effect": {
+        "on_hit": [
           {
-            "event": "vsconw:ice_sword_hit"
+            "effect": "slowness",
+            "chance": 0.22,
+            "duration": 5,
+            "amplifier": 255,
+            "show_particles": false
+          },
+          {
+            "effect": "weakness",
+            "chance": 0.22,
+            "duration": 5,
+            "amplifier": 255,
+            "show_particles": false
           }
         ]
       }
     }
-  },
-  "events": {
-    "vsconw:ice_sword_hit": {
-      "sequence": [
-        {
-          "run_command": {
-            "command": "/execute if random < 0.22 run effect @s slowness 5 255 true"
-          }
-        },
-        {
-          "run_command": {
-            "command": "/execute if random < 0.22 run effect @s weakness 5 255 true"
-          }
-        }
-      ]
-    }
   }
 }
-
