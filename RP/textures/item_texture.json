@@ -3,6 +3,7 @@
   "texture_name": "atlas.items",
   "textures": {
     "blacksteel_rapier": "textures/item/blacksteel_rapier",
+    "ancient_sword": "textures/item/ancient_sword",
     "melon_sword": "textures/item/melon_sword",
     "ration": "textures/item/ration",
     "glass_sword": "textures/item/glass_sword",
