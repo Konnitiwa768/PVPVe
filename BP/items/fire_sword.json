@@ -12,29 +12,23 @@
       "minecraft:attack": {
         "damage": 7.25
       },
-      "minecraft:use_on": {
-        "on_use": [
+      "minecraft:attack_effect": {
+        "on_hit": [
           {
-            "event": "vsconw:fire_sword_hit"
+            "effect": "weakness",
+            "chance": 1.0,
+            "duration": 3,
+            "amplifier": 1,
+            "show_particles": false
+          },
+          {
+            "burn": {
+              "chance": 1.0,
+              "duration": 3
+            }
           }
         ]
       }
-    }
-  },
-  "events": {
-    "vsconw:fire_sword_hit": {
-      "sequence": [
-        {
-          "run_command": {
-            "command": "/effect @s weakness 3 1 true"
-          }
-        },
-        {
-          "run_command": {
-            "command": "/effect @s fire 3 0 true"
-          }
-        }
-      ]
     }
   }
 }
