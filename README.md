@@ -5,7 +5,7 @@ https://aternos.org/files/packs/packs.txt
 
 live at https://konnitiwa768.github.io/PVPVe/4.html
 
-https://konnitiwa768.github.io/PVPVe/6.html
+https://konnitiwa768.github.io/PVPVe/7.html
 
 Last deployed by @Konnitiwa768 Konnitiwa768 5 minutes ago
 https://webftp-162-43-55-8.xvps.ne.jp/
