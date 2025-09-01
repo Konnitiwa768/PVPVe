@@ -1,32 +1,49 @@
 {
-  "format_version": "1.20.10",
+  "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:ice_sword",
       "category": "Equipment"
     },
     "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "sword"
+      },
+      "minecraft:icon": {
+        "texture": "textures/item/ice_sword"
+      },
+      "minecraft:allow_off_hand": true,
       "minecraft:durability": {
+        "damage_chance": {
+          "min": 10,
+          "max": 50
+        },
         "max_durability": 272
       },
-      "minecraft:attack": {
-        "damage": 5.5
+      "minecraft:display_name": {
+        "value": "氷の剣"
       },
-      "minecraft:attack_effect": {
-        "on_hit": [
+      "minecraft:damage": 5.5
+    },
+    "events": {
+      "minecraft:entity_hit": {
+        "sequence": [
           {
-            "effect": "slowness",
-            "chance": 0.22,
-            "duration": 5,
-            "amplifier": 255,
-            "show_particles": false
+            "add_effect": {
+              "effect": "slowness",
+              "duration": 5,
+              "amplifier": 2
+            }
           },
           {
-            "effect": "weakness",
-            "chance": 0.22,
-            "duration": 5,
-            "amplifier": 255,
-            "show_particles": false
+            "add_effect": {
+              "effect": "weakness",
+              "duration": 5,
+              "amplifier": 2
+            }
           }
         ]
       }
