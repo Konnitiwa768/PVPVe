@@ -1,30 +1,38 @@
 {
-  "format_version": "1.20.10",
+  "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
-      "identifier": "vsconw:fire_sword",
-      "category": "Equipment"
+      "identifier": "vsconw:fire_sword"
     },
     "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "sword"
+      },
+      "minecraft:icon": {
+        "texture": "textures/item/fire_sword"
+      },
+      "minecraft:allow_off_hand": true,
       "minecraft:durability": {
+        "damage_chance": {
+          "min": 10,
+          "max": 50
+        },
         "max_durability": 1882
       },
-      "minecraft:attack": {
-        "damage": 7.25
+      "minecraft:display_name": {
+        "value": "火の剣"
       },
-      "minecraft:attack_effect": {
-        "on_hit": [
+      "minecraft:damage": 7.25
+    },
+    "events": {
+      "minecraft:entity_hit": {
+        "sequence": [
           {
-            "effect": "weakness",
-            "chance": 1.0,
-            "duration": 3,
-            "amplifier": 1,
-            "show_particles": false
-          },
-          {
-            "burn": {
-              "chance": 1.0,
-              "duration": 3
+            "set_on_fire": {
+              "duration": 4
             }
           }
         ]
