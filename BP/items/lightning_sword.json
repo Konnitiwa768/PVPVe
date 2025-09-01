@@ -1,40 +1,55 @@
 {
-  "format_version": "1.20.10",
+  "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:lightning_sword",
       "category": "Equipment"
     },
     "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "sword"
+      },
+      "minecraft:icon": {
+        "texture": "textures/item/lightning_sword"
+      },
+      "minecraft:allow_off_hand": true,
       "minecraft:durability": {
+        "damage_chance": {
+          "min": 10,
+          "max": 50
+        },
         "max_durability": 1561
       },
-      "minecraft:attack": {
-        "damage": 11.1
+      "minecraft:display_name": {
+        "value": "雷の剣"
       },
-      "minecraft:use_on": {
-        "on_use": [
+      "minecraft:damage": 11.1
+    },
+    "events": {
+      "minecraft:entity_hit": {
+        "sequence": [
           {
-            "event": "vsconw:lightning_sword_hit"
+            "run_command": {
+              "command": [
+                "execute if random < 0.07 run summon creeper ~ ~ ~ minecraft:creeper ~ ~ ~ {ExplosionRadius:4,CustomName:'\"UnstableCreeper\"',powered:0}"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": [
+                "execute if random < 0.48 run summon lightning_bolt ~ ~ ~"
+              ]
+            }
           }
         ]
       }
     }
-  },
-  "events": {
-    "vsconw:lightning_sword_hit": {
-      "sequence": [
-        {
-          "run_command": {
-            "command": "/execute if random < 0.07 run summon creeper ~ ~ ~ {ExplosionRadius:4,CustomName:'\"UnstableCreeper\"',powered:0}"
-          }
-        },
-        {
-          "run_command": {
-            "command": "/execute if random < 0.48 run summon lightning_bolt ~ ~ ~"
-          }
-        }
-      ]
+  }
+}      ]
     }
   }
 }
