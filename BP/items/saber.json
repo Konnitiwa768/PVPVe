@@ -3,7 +3,8 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:saber",
-      "category": "Equipment"
+      "category": "Equipment",
+      "icon": "textures/items/saber"
     },
     "components": {
       "minecraft:max_stack_size": 1,
