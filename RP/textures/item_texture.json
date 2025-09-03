@@ -1,7 +1,7 @@
 {
   "resource_pack_name": "blacksteel_items",
   "texture_name": "atlas.items",
-  "textures": {
+  "texture_data": {
     "blacksteel_rapier": "textures/items/blacksteel_rapier",
     "ancient_sword": "textures/items/ancient_sword",
     "melon_sword": "textures/items/melon_sword",
