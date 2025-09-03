@@ -3,7 +3,8 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:ice_sword",
-      "category": "Equipment"
+      "category": "Equipment",
+      "icon": "textures/items/ice_sword"
     },
     "components": {
       "minecraft:max_stack_size": 1,
