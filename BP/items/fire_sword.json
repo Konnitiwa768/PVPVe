@@ -2,7 +2,9 @@
   "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
-      "identifier": "vsconw:fire_sword"
+      "identifier": "vsconw:fire_sword",
+      "category": "Equipment",
+      "icon": "textures/items/fire_sword"
     },
     "components": {
       "minecraft:max_stack_size": 1,
@@ -12,7 +14,7 @@
         "slot": "sword"
       },
       "minecraft:icon": {
-        "texture": "textures/item/fire_sword"
+        "texture": "textures/items/fire_sword"
       },
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
