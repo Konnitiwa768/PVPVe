@@ -2,13 +2,13 @@
   "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
-      "identifier": "vscow:blacksteel_greatblade",
+      "identifier": "vscow:blacksteel_greataxe",
       "category": "equipment"
-      "icon": "textures/items/blacksteel_greatblade"
+      "icon": "textures/items/blacksteel_greataxe"
     },
     "components": {
       "minecraft:icon": {
-        "texture": "blacksteel_greatblade"
+        "texture": "blacksteel_greataxe"
       },
       "minecraft:damage": 1561,
       "minecraft:weapon": {
