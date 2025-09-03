@@ -4,6 +4,7 @@
     "description": {
       "identifier": "vsconw:lightning_sword",
       "category": "Equipment"
+      "icon": "textures/items/lightning_sword"
     },
     "components": {
       "minecraft:max_stack_size": 1,
@@ -47,9 +48,6 @@
           }
         ]
       }
-    }
-  }
-}      ]
     }
   }
 }
