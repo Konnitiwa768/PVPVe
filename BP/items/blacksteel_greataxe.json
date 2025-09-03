@@ -4,10 +4,11 @@
     "description": {
       "identifier": "vscow:blacksteel_greatblade",
       "category": "equipment"
+      "icon": "textures/items/blacksteel_greatblade"
     },
     "components": {
       "minecraft:icon": {
-        "texture": "blacksteel_greataxe"
+        "texture": "blacksteel_greatblade"
       },
       "minecraft:damage": 1561,
       "minecraft:weapon": {
