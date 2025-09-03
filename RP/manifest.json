@@ -5,7 +5,7 @@
     "name": "Vsconw RP",
     "uuid": "c1e3f1c1-cccc-4e7d-9c1e-1111cccc1111",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 20, 0]
+    "min_engine_version": [1, 21, 10]
   },
   "modules": [
     {
