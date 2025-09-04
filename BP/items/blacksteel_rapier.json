@@ -5,11 +5,15 @@
       "identifier": "vsconw:blacksteel_rapier",
       "category": "equipment"
     },
+    "minecraft:enchantable": {
+        "value": 27,
+        "slot": "sword"
+      },
     "components": {
       "minecraft:icon": {
         "texture": "blacksteel_rapier"
       },
-      "minecraft:damage": 1561,
+      "minecraft:damage": 9999,
       "minecraft:weapon": {
         "damage": 7
       },
