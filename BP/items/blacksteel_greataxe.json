@@ -10,6 +10,10 @@
       "minecraft:icon": {
         "texture": "blacksteel_greataxe"
       },
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "sword"
+      },
       "minecraft:damage": 1561,
       "minecraft:weapon": {
         "damage": 22
