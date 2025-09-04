@@ -14,7 +14,7 @@
         "slot": "sword"
       },
       "minecraft:icon": {
-        "texture": "textures/items/fire_sword"
+        "texture": "fire_sword"
       },
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
