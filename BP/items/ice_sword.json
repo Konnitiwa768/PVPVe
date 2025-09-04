@@ -14,7 +14,7 @@
         "slot": "sword"
       },
       "minecraft:icon": {
-        "texture": "textures/item/ice_sword"
+        "texture": "ice_sword"
       },
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
