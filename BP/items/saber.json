@@ -14,7 +14,7 @@
         "slot": "sword"
       },
       "minecraft:icon": {
-        "texture": "textures/item/saber"
+        "texture": "saber"
       },
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
