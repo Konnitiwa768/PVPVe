@@ -14,7 +14,7 @@
         "slot": "sword"
       },
       "minecraft:icon": {
-        "texture": "textures/item/lightning_sword"
+        "texture": "lightning_sword"
       },
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
