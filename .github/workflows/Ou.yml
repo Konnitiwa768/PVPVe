@@ -1,6 +1,9 @@
 name: Update Lapis Armor Sounds
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -14,40 +17,39 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y sox curl ffmpeg
+          sudo apt-get install -y sox ffmpeg vgmstream-cli curl
 
-      - name: Download original FSB files
+      - name: Prepare directories
         run: |
-          mkdir -p sounds/armor
+          mkdir -p RP/sounds/armor
+          mkdir -p wav
+
+      - name: Download FSB files from Bedrock-samples
+        run: |
           for i in {1..6}; do
-            curl -L -o sounds/armor/equip_iron$i.fsb https://raw.githubusercontent.com/mojang/bedrock-samples/main/resource_pack/sounds/armor/equip_iron$i.fsb
+            curl -L -o RP/sounds/armor/equip_iron$i.fsb \
+              https://raw.githubusercontent.com/mojang/bedrock-samples/main/resource_pack/sounds/armor/equip_iron$i.fsb
           done
 
-      - name: Convert FSB to WAV
+      - name: Copy FSB to lapislazuli
         run: |
-          mkdir -p sounds/armor/wav
-          for f in sounds/armor/equip_iron*.fsb; do
-            fsbext extract "$f" --output "sounds/armor/wav/$(basename ${f/.fsb/.wav})"
+          for i in {1..6}; do
+            cp RP/sounds/armor/equip_iron$i.fsb RP/sounds/armor/equip_lapislazuli$i.fsb
           done
 
-      - name: Apply Lapis-like effect
+      - name: Convert FSB to WAV and apply Lapis effect
         run: |
-          for f in sounds/armor/wav/equip_iron*.wav; do
-            out="sounds/armor/wav/$(basename ${f/equip_iron/equip_lapislazuli})"
-            sox "$f" "$out" pitch 200 reverb 50
-          done
-
-      - name: Convert WAV back to FSB
-        run: |
-          mkdir -p sounds/armor/fsb
-          for f in sounds/armor/wav/equip_lapislazuli*.wav; do
-            fsbext create "$f" --output "sounds/armor/fsb/$(basename ${f/.wav/.fsb})"
+          for i in {1..6}; do
+            in_fsb="RP/sounds/armor/equip_iron$i.fsb"
+            out_wav="wav/equip_lapislazuli$i.wav"
+            vgmstream-cli "$in_fsb" -o "$out_wav"
+            sox "$out_wav" "$out_wav" pitch 200 reverb 50
           done
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sounds/armor/fsb/* sounds/armor/wav/*
-          git commit -m "Add lapis-lazuli armor sounds (FSB + WAV)"
+          git add RP/sounds/armor/equip_lapislazuli*.fsb wav/*
+          git commit -m "Update lapislazuli armor sounds (FSB + WAV)"
           git push
