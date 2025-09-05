@@ -1,0 +1,53 @@
+name: Update Lapis Armor Sounds
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sox curl ffmpeg
+
+      - name: Download original FSB files
+        run: |
+          mkdir -p sounds/armor
+          for i in {1..6}; do
+            curl -L -o sounds/armor/equip_iron$i.fsb https://raw.githubusercontent.com/mojang/bedrock-samples/main/resource_pack/sounds/armor/equip_iron$i.fsb
+          done
+
+      - name: Convert FSB to WAV
+        run: |
+          mkdir -p sounds/armor/wav
+          for f in sounds/armor/equip_iron*.fsb; do
+            fsbext extract "$f" --output "sounds/armor/wav/$(basename ${f/.fsb/.wav})"
+          done
+
+      - name: Apply Lapis-like effect
+        run: |
+          for f in sounds/armor/wav/equip_iron*.wav; do
+            out="sounds/armor/wav/$(basename ${f/equip_iron/equip_lapislazuli})"
+            sox "$f" "$out" pitch 200 reverb 50
+          done
+
+      - name: Convert WAV back to FSB
+        run: |
+          mkdir -p sounds/armor/fsb
+          for f in sounds/armor/wav/equip_lapislazuli*.wav; do
+            fsbext create "$f" --output "sounds/armor/fsb/$(basename ${f/.wav/.fsb})"
+          done
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sounds/armor/fsb/* sounds/armor/wav/*
+          git commit -m "Add lapis-lazuli armor sounds (FSB + WAV)"
+          git push
