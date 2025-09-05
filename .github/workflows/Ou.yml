@@ -17,21 +17,13 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake git sox ffmpeg curl
-
-      - name: Build vgmstream
-        run: |
-          git clone https://github.com/vgmstream/vgmstream.git
-          mkdir -p vgmstream/build
-          cd vgmstream/build
-          cmake ..
-          make
-          cd ../..
+          sudo apt-get install -y sox ffmpeg curl unzip
 
       - name: Prepare directories
         run: |
           mkdir -p RP/sounds/armor
           mkdir -p wav
+          mkdir -p tools
 
       - name: Download FSB files from Bedrock-samples
         run: |
@@ -46,12 +38,18 @@ jobs:
             cp RP/sounds/armor/equip_iron$i.fsb RP/sounds/armor/equip_lapislazuli$i.fsb
           done
 
+      - name: Download vgmstream static binary
+        run: |
+          curl -L -o tools/vgmstream-cli.zip https://ci.appveyor.com/api/buildjobs/xyz/artifacts/vgmstream-cli.zip
+          unzip tools/vgmstream-cli.zip -d tools
+          chmod +x tools/vgmstream-cli
+
       - name: Convert FSB to WAV and apply Lapis effect
         run: |
           for i in {1..6}; do
             in_fsb="RP/sounds/armor/equip_iron$i.fsb"
             out_wav="wav/equip_lapislazuli$i.wav"
-            ./vgmstream/build/src/vgmstream-cli "$in_fsb" -o "$out_wav"
+            ./tools/vgmstream-cli "$in_fsb" -o "$out_wav"
             sox "$out_wav" "$out_wav" pitch 200 reverb 50
           done
 
