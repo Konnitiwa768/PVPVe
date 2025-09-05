@@ -17,7 +17,16 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y sox ffmpeg vgmstream-cli curl
+          sudo apt-get install -y build-essential cmake git sox ffmpeg curl
+
+      - name: Build vgmstream
+        run: |
+          git clone https://github.com/vgmstream/vgmstream.git
+          mkdir -p vgmstream/build
+          cd vgmstream/build
+          cmake ..
+          make
+          cd ../..
 
       - name: Prepare directories
         run: |
@@ -42,7 +51,7 @@ jobs:
           for i in {1..6}; do
             in_fsb="RP/sounds/armor/equip_iron$i.fsb"
             out_wav="wav/equip_lapislazuli$i.wav"
-            vgmstream-cli "$in_fsb" -o "$out_wav"
+            ./vgmstream/build/src/vgmstream-cli "$in_fsb" -o "$out_wav"
             sox "$out_wav" "$out_wav" pitch 200 reverb 50
           done
 
