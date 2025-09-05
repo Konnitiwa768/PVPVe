@@ -189,3 +189,39 @@ world.afterEvents.entityHit.subscribe(event => {
     }
   });
 });
+
+import { system } from "@minecraft/server";
+
+// 共通関数：エンティティに効果を適用
+function applyEffect(hitEntity, effectType) {
+  switch (effectType) {
+    case "ice":
+      hitEntity.addEffect("slowness", 5, { amplifier: 2 });
+      hitEntity.addEffect("weakness", 5, { amplifier: 2 });
+      break;
+    case "fire":
+      // Bedrockのバージョンによって "fire" または "burn" を使用
+      hitEntity.addEffect("fire", 5, { amplifier: 1 });
+      break;
+  }
+}
+
+// Ice Sword コンポーネント
+const ItemIceSwordComponent = {
+  onHitEntity({ hitEntity }) {
+    applyEffect(hitEntity, "ice");
+  }
+};
+
+// Fire Sword コンポーネント
+const ItemFireSwordComponent = {
+  onHitEntity({ hitEntity }) {
+    applyEffect(hitEntity, "fire");
+  }
+};
+
+// スクリプト登録
+system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
+  itemComponentRegistry.registerCustomComponent("vsconw:ice_sword", ItemIceSwordComponent);
+  itemComponentRegistry.registerCustomComponent("vsconw:fire_sword", ItemFireSwordComponent);
+});
