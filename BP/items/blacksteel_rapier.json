@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.81",
+  "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:blacksteel_rapier",
