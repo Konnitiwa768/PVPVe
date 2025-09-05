@@ -6,6 +6,10 @@
       "category": "Equipment"
     },
     "components": {
+      "minecraft:icon": {
+        "texture": "ancient_sword"
+      },
+      "
       "minecraft:durability": {
         "max_durability": 1172
       },
