@@ -10,6 +10,10 @@
         "max_durability": 30
       },
       "minecraft:damage": 6,
+      "minecraft:enchantable": {
+        "slot": "sword",
+        "value": 56
+      },
       "minecraft:icon": "glass_sword",
       "minecraft:hand_equipped": true,
       "minecraft:creative_category": {
