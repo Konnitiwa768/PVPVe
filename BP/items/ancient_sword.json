@@ -1,15 +1,12 @@
 {
-  "format_version": "1.20.10",
+  "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
-      "identifier": "vsconw:_ancient_sword",
+      "identifier": "vsconw:ancient_sword",
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "ancient_sword"
-      },
-      "
+      "minecraft:icon": "ancient_sword",
       "minecraft:durability": {
         "max_durability": 1172
       },
