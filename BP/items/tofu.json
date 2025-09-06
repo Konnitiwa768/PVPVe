@@ -13,6 +13,9 @@
         "use_duration": 1.6,
         "movement_modifier": 0.92
       },
+      "minecraft:display_name":{
+        "value": "とうふ"
+      },
       "minecraft:use_animation": "eat",
       "minecraft:food": {
         "nutrition": 3,
