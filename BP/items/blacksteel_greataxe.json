@@ -15,7 +15,7 @@
       },
       "minecraft:repairable": {
         "repair_items": [
-          { "items": ["netherite_ingot"], "repair_amount": "normal" }
+          { "items": ["netherite_ingot"], "repair_amount": 450 }
         ]
       },
       "minecraft:damage": 1061,
