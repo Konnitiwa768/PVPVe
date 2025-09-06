@@ -6,9 +6,7 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "sweet_tofu"
-      },
+      "minecraft:icon": "sweet_tofu"
       "minecraft:use_modifiers": {
         "use_duration": 0.6,
         "movement_modifier": 0.35
