@@ -10,6 +10,15 @@
       "minecraft:durability": {
         "max_durability": 1172
       },
+      "minecraft:enchantable": {
+        "value": 99,
+        "slot": "sword"
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
       "minecraft:attack": {
         "damage": 7.5
       },
