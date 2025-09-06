@@ -10,6 +10,11 @@
         "value": 27,
         "slot": "sword"
       },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
       "minecraft:icon": "blacksteel_rapier",
       "minecraft:allow_off_hand": true,
       "minecraft:damage": 9999,
