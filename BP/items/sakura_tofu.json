@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:sakura_tofu",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "sakura_tofu",
+      "minecraft:use_duration": 42,
+      "minecraft:food": {
+        "nutrition": 9,
+        "saturation_modifier": "normal",
+        "can_always_eat": false,
+        "effects": [
+          {
+            "name": "regeneration",
+            "amplifier": 5,
+            "duration": 200
+          }
+        ]
+      }
+    }
+  }
+}
