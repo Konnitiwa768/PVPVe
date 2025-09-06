@@ -13,7 +13,7 @@
         "value": 10,
         "slot": "sword"
       },
-      "minecraft:icon": "ice_sword"
+      "minecraft:icon": "ice_sword",
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
         "damage_chance": {
