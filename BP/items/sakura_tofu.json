@@ -9,7 +9,11 @@
       "minecraft:icon": {
         "texture": "sakura_tofu"
       },
-      "minecraft:use_duration": 42,
+      "minecraft:use_modifiers": {
+        "use_duration": 2.1,
+        "movement_modifier": 0.92
+      },
+      "minecraft:use_animation": "eat",
       "minecraft:food": {
         "nutrition": 9,
         "saturation_modifier": "normal",
