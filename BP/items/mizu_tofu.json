@@ -19,18 +19,32 @@
         "nutrition": 0.7,
         "saturation_modifier": "0.8",
         "can_always_eat": false,
-        "on_consume": {
-          "event": "vsconw:ate_mizu_tofu"
-        }
-      }
-    },
-    "events": {
-      "vsconw:ate_mizu_tofu": {
-        "run_command": {
-          "command": [
-            "function ate_mizu_tofu"
-          ]
-        }
+        "effects": [
+          {
+            "name": "poison",
+            "chance": 0.0008,
+            "duration": 9999,
+            "amplifier": 1
+          },
+          {
+            "name": "absorption",
+            "chance": 0.9,
+            "duration": 10,
+            "amplifier": 5
+          },
+          {
+            "name": "resistance",
+            "chance": 0.1,
+            "duration": 5,
+            "amplifier": 4
+          },
+          {
+            "name": "water_breathing",
+            "chance": 0.8,
+            "duration": 540,
+            "amplifier": 2
+          }
+        ]
       }
     }
   }
