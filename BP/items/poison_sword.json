@@ -13,6 +13,11 @@
         "slot": "sword"
       },
       "minecraft:icon": "poison_sword",
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
       "minecraft:allow_off_hand": true,
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
