@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:kusa_tofu",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "kusa_tofu",
+      "minecraft:use_duration": 49,
+      "minecraft:food": {
+        "nutrition": 11.7,
+        "saturation_modifier": "medium",
+        "can_always_eat": false,
+        "effects": [
+          {
+            "name": "strength",
+            "amplifier": 7,
+            "duration": 100
+          }
+        ]
+      }
+    }
+  }
+}
