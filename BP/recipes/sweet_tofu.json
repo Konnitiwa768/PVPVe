@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vsconw:sweet_tofu"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " G ",
+      "GSG",
+      " G "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:sweet_berry"
+      },
+      "S": {
+        "item": "vsconw:tofu"
+      }
+    },
+    "result": {
+      "item": "vsconw:sweet_tofu",
+      "count": 4
+    }
+  }
+}
