@@ -6,7 +6,9 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": "mizu_tofu",
+      "minecraft:icon": {
+        "texture": "mizu_tofu"
+      },
       "minecraft:use_duration": 2,
       "minecraft:food": {
         "nutrition": 0.7,
