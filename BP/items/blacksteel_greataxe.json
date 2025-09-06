@@ -13,6 +13,11 @@
         "value": 4,
         "slot": "sword"
       },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["netherite_ingot"], "repair_amount": "normal" }
+        ]
+      },
       "minecraft:damage": 1061,
       "minecraft:weapon": {
         "damage": 45
