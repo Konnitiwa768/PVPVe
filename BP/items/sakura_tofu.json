@@ -28,7 +28,7 @@
       "vsconw:ate_sakura_tofu": {
         "run_command": {
           "command": [
-            "function vsconw/ate_sakura_tofu"
+            "function ate_sakura_tofu"
           ]
         }
       }
