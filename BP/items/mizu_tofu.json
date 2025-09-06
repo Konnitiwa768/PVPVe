@@ -8,11 +8,15 @@
     "components": {
       "minecraft:icon": {
         "texture": "mizu_tofu"
+      }, 
+      "minecraft:use_modifiers": {
+        "use_duration": 0.1,
+        "movement_modifier": 1.92
       },
-      "minecraft:use_duration": 2,
+      "minecraft:use_animation": "eat",
       "minecraft:food": {
         "nutrition": 0.7,
-        "saturation_modifier": "medium",
+        "saturation_modifier": "0.8",
         "can_always_eat": false,
         "effects": [
           {
