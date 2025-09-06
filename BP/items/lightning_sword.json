@@ -13,9 +13,7 @@
         "value": 10,
         "slot": "sword"
       },
-      "minecraft:icon": {
-        "texture": "lightning_sword"
-      },
+      "minecraft:icon": "lightning_sword",
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
         "damage_chance": {
