@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:dragon_tofu",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "dragon_tofu",
+      "minecraft:use_duration": 99,
+      "minecraft:food": {
+        "nutrition": 20,
+        "saturation_modifier": "medium",
+        "can_always_eat": false,
+        "effects": [
+          {
+            "name": "haste",
+            "amplifier": 77,
+            "duration": 3600,
+          }
+        ]
+      }
+    }
+  }
+}
