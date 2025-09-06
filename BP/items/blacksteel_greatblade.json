@@ -9,6 +9,11 @@
     "components": {
       "minecraft:icon": "blacksteel_greatblade",
       "minecraft:allow_off_hand": true
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["nether_star"], "repair_amount": 625 }
+        ]
+      },
       "minecraft:enchantable": {
         "value": 19,
         "slot": "sword"
