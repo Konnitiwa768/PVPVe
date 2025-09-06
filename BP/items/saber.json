@@ -13,9 +13,7 @@
         "value": 10,
         "slot": "sword"
       },
-      "minecraft:icon": {
-        "texture": "saber"
-      },
+      "minecraft:icon": "saber",
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
         "damage_chance": {
@@ -31,8 +29,12 @@
       "minecraft:cooldown": {
         "category": "melee",
         "duration": 0.3
-      }
-    },
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
     "events": {
       "minecraft:equipped": {
         "sequence": [
