@@ -14,9 +14,6 @@
       },
       "minecraft:icon": "melon_sword",
       "minecraft:hand_equipped": true,
-      "minecraft:creative_category": {
-        "parent": "itemGroup.name.sword"
-      }
     }
   }
 }
