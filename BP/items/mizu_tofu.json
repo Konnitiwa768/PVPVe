@@ -8,7 +8,10 @@
     "components": {
       "minecraft:icon": {
         "texture": "mizu_tofu"
-      }, 
+      },
+      "minecraft:display_name":{
+        "value": "みずみずしいとうふ"
+      },
       "minecraft:use_modifiers": {
         "use_duration": 0.1,
         "movement_modifier": 1.92
