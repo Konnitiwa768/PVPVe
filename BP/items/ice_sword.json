@@ -25,6 +25,11 @@
       "minecraft:display_name": {
         "value": "氷の剣"
       },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
       "minecraft:damage": 5.5
     },
     "events": {
