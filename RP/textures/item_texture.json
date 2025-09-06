@@ -20,6 +20,21 @@
     "sakura_tofu": {
       "textures": "textures/items/sakura_tofu"
     },
+    "tamago_tofu": {
+      "textures": "textures/items/tamago_tofu"
+    },
+    "kusa_tofu": {
+      "textures": "textures/items/kusa_tofu"
+    },
+    "dragon_tofu": {
+      "textures": "textures/items/dragon_tofu"
+    },
+    "sweet_tofu": {
+      "textures": "textures/items/sweet_tofu"
+    },
+    "mizu_tofu": {
+      "textures": "textures/items/mizu_tofu"
+    },
     "ration": {
       "textures": "textures/items/ration"
     },
