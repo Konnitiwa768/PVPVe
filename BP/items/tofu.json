@@ -9,10 +9,14 @@
       "minecraft:icon": {
         "texture": "tofu"
       },
-      "minecraft:use_duration": 32,
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.92
+      },
+      "minecraft:use_animation": "eat",
       "minecraft:food": {
         "nutrition": 3,
-        "saturation_modifier": "normal",
+        "saturation_modifier": "5",
         "can_always_eat": false,
         "effects": [
           {
