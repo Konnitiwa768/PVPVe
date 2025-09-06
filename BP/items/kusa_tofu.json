@@ -10,7 +10,7 @@
         "texture": "kusa_tofu"
       },
       "minecraft:display_name":{
-      "value": "草とうふ"
+        "value": "草とうふ"
       },
       "minecraft:use_modifiers": {
         "use_duration": 2.7,
