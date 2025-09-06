@@ -6,8 +6,10 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": "sakura_tofu"
-      "minecraft:display_name":{
+      "minecraft:icon": {
+        "texture": "sakura_tofu"
+      },
+      "minecraft:display_name": {
         "value": "桜とうふ"
       },
       "minecraft:use_modifiers": {
@@ -19,13 +21,18 @@
         "nutrition": 9,
         "saturation_modifier": "normal",
         "can_always_eat": true,
-        "effects": [
-          {
-            "name": "regeneration",
-            "amplifier": 5,
-            "duration": 200
-          }
-        ]
+        "on_consume": {
+          "event": "vsconw:ate_sakura_tofu"
+        }
+      }
+    },
+    "events": {
+      "vsconw:ate_sakura_tofu": {
+        "run_command": {
+          "command": [
+            "function vsconw/ate_sakura_tofu"
+          ]
+        }
       }
     }
   }
