@@ -8,7 +8,8 @@
     },
     "components": {
       "minecraft:icon": "blacksteel_greatblade",
-      "minecraft:allow_off_hand": true,minecraft:enchantable": {
+      "minecraft:allow_off_hand": true
+      "minecraft:enchantable": {
         "value": 19,
         "slot": "sword"
       },
