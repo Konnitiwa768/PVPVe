@@ -19,18 +19,32 @@
         "nutrition": 9,
         "saturation_modifier": "5.5",
         "can_always_eat": true,
-        "on_consume": {
-          "event": "vsconw:ate_sakura_tofu"
-        }
-      }
-    },
-    "events": {
-      "vsconw:ate_sakura_tofu": {
-        "run_command": {
-          "command": [
-            "function ate_sakura_tofu"
-          ]
-        }
+        "effects": [
+          {
+            "name": "health_boost",
+            "chance": 0.08,
+            "duration": 120,
+            "amplifier": 255
+          },
+          {
+            "name": "absorption",
+            "chance": 0.08,
+            "duration": 16,
+            "amplifier": 255
+          },
+          {
+            "name": "resistance",
+            "chance": 1.0,
+            "duration": 50,
+            "amplifier": 2
+          },
+          {
+            "name": "regeneration",
+            "chance": 0.7,
+            "duration": 20,
+            "amplifier": 3
+          }
+        ]
       }
     }
   }
