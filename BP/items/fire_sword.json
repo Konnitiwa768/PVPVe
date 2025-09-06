@@ -13,9 +13,7 @@
         "value": 10,
         "slot": "sword"
       },
-      "minecraft:icon": {
-        "texture": "fire_sword"
-      },
+      "minecraft:icon": "fire_sword"q
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
         "damage_chance": {
