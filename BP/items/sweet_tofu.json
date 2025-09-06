@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:sweet_tofu",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "sweet_tofu",
+      "minecraft:use_duration": 52,
+      "minecraft:food": {
+        "nutrition": 9.7,
+        "saturation_modifier": "medium",
+        "can_always_eat": false,
+        "effects": [
+          {
+            "name": "regeneration",
+            "amplifier": 255,
+            "duration": 50
+          }
+        ]
+      }
+    }
+  }
+}
