@@ -1,0 +1,12 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:tofu_generator",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "tofu_generator"
+    }
+  }
+}
