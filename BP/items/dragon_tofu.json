@@ -3,7 +3,6 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:dragon_tofu",
-      "category": "Equipment"
     },
     "components": {    
       "minecraft:icon": "dragon_tofu"
@@ -19,18 +18,32 @@
         "nutrition": 20,
         "saturation_modifier": "12",
         "can_always_eat": false,
-        "on_consume": {
-          "event": "vsconw:ate_dragon_tofu"
-        }
-      }
-    },
-    "events": {
-      "vsconw:ate_dragon_tofu": {
-        "run_command": {
-          "command": [
-            "function ate_dragon_tofu"
-          ]
-        }
+        "effects": [
+          {
+            "name": "regeneration",
+            "chance": 1.0,
+            "duration": 90,
+            "amplifier": 1
+          },
+          {
+            "name": "absorption",
+            "chance": 1.0,
+            "duration": 120,
+            "amplifier": 4
+          },
+          {
+            "name": "resistance", // damage resistance
+            "chance": 1.0,
+            "duration": 200,
+            "amplifier": 1
+          },
+          {
+            "name": "fire_resistance",
+            "chance": 1.0,
+            "duration": 500,
+            "amplifier": 0
+          }
+        ]
       }
     }
   }
