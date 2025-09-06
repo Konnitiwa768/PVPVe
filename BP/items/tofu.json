@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:tofu",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "tofu",
+      "minecraft:use_duration": 32,
+      "minecraft:food": {
+        "nutrition": 3,
+        "saturation_modifier": "normal",
+        "can_always_eat": false,
+        "effects": [
+          {
+            "name": "strength",
+            "amplifier": 1,
+            "duration": 200
+          }
+        ]
+      }
+    }
+  }
+}
