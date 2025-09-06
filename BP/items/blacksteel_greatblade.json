@@ -3,8 +3,7 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:blacksteel_greatblade",
-      "category": "equipment",
-      "icon": "textures/items/blacksteel_greatblade"
+      "category": "Equipment"
     },
     "components": {
       "minecraft:icon": "blacksteel_greatblade",
