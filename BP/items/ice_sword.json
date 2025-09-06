@@ -22,14 +22,17 @@
         },
         "max_durability": 272
       },
-      "minecraft:display_name": {
+    },
+    "minecraft:display_name": {
         "value": "氷の剣"
       },
-      "minecraft:repairable": {
+      
+    "minecraft:repairable": {
         "repair_items": [
           { "items": ["prismarine_shard"], "repair_amount": "default" }
         ]
       },
+    "minecraft:attack": {
       "minecraft:damage": 5.5
     },
     "events": {
