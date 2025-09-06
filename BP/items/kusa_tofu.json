@@ -6,8 +6,9 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": "kusa_tofu",
-      "minecraft:use_duration": 49,
+      "minecraft:icon": {
+        "texture": "kusa_tofu"
+      },
       "minecraft:food": {
         "nutrition": 11.7,
         "saturation_modifier": "medium",
