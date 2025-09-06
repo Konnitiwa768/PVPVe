@@ -7,10 +7,10 @@
     },
     "components": {
       "minecraft:durability": {
-        "max_durability": 2147483647
+        "max_durability": 1
       },
       "minecraft:icon": "melon_sword",
-      "minecraft:damage": 30,
+      "minecraft:damage": 2147483647,
       "minecraft:hand_equipped": true,
       "minecraft:creative_category": {
         "parent": "itemGroup.name.sword"
