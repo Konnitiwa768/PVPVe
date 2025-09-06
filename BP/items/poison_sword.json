@@ -12,9 +12,8 @@
         "value": 10,
         "slot": "sword"
       },
-      "minecraft:icon": {
-        "texture": "poison_sword"
-      },
+      "minecraft:icon": "poison_sword",
+      "minecraft:allow_off_hand": true,
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
         "damage_chance": {
