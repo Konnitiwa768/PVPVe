@@ -8,8 +8,17 @@
     "ancient_sword": {
       "textures": "textures/items/ancient_sword"
     },
-    "melon_sword": {
-      "textures": "textures/items/melon_sword"
+    "blacksteel_rapier": {
+      "textures": "textures/items/blacksteel_rapier"
+    },
+    "tofu": {
+      "textures": "textures/items/tofu"
+    },
+    "tofu_generator": {
+      "textures": "textures/items/tofu_generator"
+    },
+    "sakura_tofu": {
+      "textures": "textures/items/sakura_tofu"
     },
     "ration": {
       "textures": "textures/items/ration"
