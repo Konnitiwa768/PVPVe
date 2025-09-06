@@ -17,7 +17,7 @@
       "minecraft:food": {
         "nutrition": 9,
         "saturation_modifier": "normal",
-        "can_always_eat": false,
+        "can_always_eat": true,
         "effects": [
           {
             "name": "regeneration",
