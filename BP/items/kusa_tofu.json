@@ -6,9 +6,7 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "kusa_tofu"
-      },
+      "minecraft:icon": "kusa_tofu"
       "minecraft:display_name":{
         "value": "草とうふ"
       },
