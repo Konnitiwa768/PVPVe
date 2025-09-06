@@ -1,18 +1,16 @@
 {
-  "format_version": "1.20",
+  "format_version": "1.21.10",
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:glass_sword",
       "category": "Equipment",
-      "icon": {
-        "texture": "glass_sword"
-      }
     },
     "components": {
       "minecraft:durability": {
         "max_durability": 30
       },
       "minecraft:damage": 6,
+      "minecraft:icon": "glass_sword",
       "minecraft:hand_equipped": true,
       "minecraft:creative_category": {
         "parent": "itemGroup.name.sword"
