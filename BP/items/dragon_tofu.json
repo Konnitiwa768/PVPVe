@@ -10,7 +10,7 @@
         "texture": "dragon_tofu"
       },
       "minecraft:display_name":{
-      "value": "ドラゴンとうふ"
+        "value": "ドラゴンとうふ"
       },
       "minecraft:use_modifiers": {
         "use_duration": 4.95,
