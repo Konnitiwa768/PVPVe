@@ -7,9 +7,12 @@
     },
     "components": {
       "minecraft:durability": {
+        "damage_chance": {
+          "min": 10,
+          "max": 50
+        },
         "max_durability": 30
       },
-      "minecraft:damage": 6,
       "minecraft:enchantable": {
         "slot": "sword",
         "value": 56
