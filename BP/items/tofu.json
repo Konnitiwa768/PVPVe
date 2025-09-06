@@ -31,7 +31,9 @@
             "chance": 1.0,
             "duration": 180,
             "amplifier": 5
-          },
-          
+          }
+        ]
+      }
+    }
   }
 }
