@@ -5,8 +5,10 @@
       "identifier": "vsconw:dragon_tofu",
       "category": "Equipment"
     },
-    "components": {
-      "minecraft:icon": "dragon_tofu",
+    "components": {    
+      "minecraft:icon": {
+        "texture": "dragon_tofu"
+      },
       "minecraft:use_duration": 99,
       "minecraft:food": {
         "nutrition": 20,
