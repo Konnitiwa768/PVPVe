@@ -9,8 +9,10 @@
       "minecraft:durability": {
         "max_durability": 1
       },
+      "minecraft:attack": {
+        "damage": 2147483647
+      },
       "minecraft:icon": "melon_sword",
-      "minecraft:damage": 2147483647,
       "minecraft:hand_equipped": true,
       "minecraft:creative_category": {
         "parent": "itemGroup.name.sword"
