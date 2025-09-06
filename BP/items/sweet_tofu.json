@@ -19,18 +19,32 @@
         "nutrition": 9.7,
         "saturation_modifier": "5.2",
         "can_always_eat": false,
-        "on_consume": {
-          "event": "ate_sweet_tofu"
-        }
-      }
-    },
-    "events": {
-      "vsconw:ate_sweet_tofu": {
-        "run_command": {
-          "command": [
-            "function ate_sweet_tofu"
-          ]
-        }
+        "effects": [
+          {
+            "name": "poison",
+            "chance": 0.16,
+            "duration": 9,
+            "amplifier": 2
+          },
+          {
+            "name": "absorption",
+            "chance": 1.0,
+            "duration": 90,
+            "amplifier": 15
+          },
+          {
+            "name": "resistance",
+            "chance": 1.0,
+            "duration": 20,
+            "amplifier": 1
+          },
+          {
+            "name": "strength",
+            "chance": 0.1,
+            "duration": 20,
+            "amplifier": 255
+          }
+        ]
       }
     }
   }
