@@ -11,6 +11,9 @@
         "use_duration": 0.6,
         "movement_modifier": 0.85
        },
+      "minecraft:display_name":{
+        "value": "卵とうふ"
+      },
       "minecraft:food": {
         "nutrition": 2.7,
         "saturation_modifier": "low",
