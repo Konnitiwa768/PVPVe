@@ -7,7 +7,10 @@
     },
     "components": {
       "minecraft:icon": "tamago_tofu",
-      "minecraft:use_duration": 12,
+      "minecraft:use_modifiers": {
+        "use_duration": 0.6,
+        "movement_modifier": 0.85
+       },
       "minecraft:food": {
         "nutrition": 2.7,
         "saturation_modifier": "low",
