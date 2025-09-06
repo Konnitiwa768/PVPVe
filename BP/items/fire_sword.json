@@ -13,6 +13,11 @@
         "value": 10,
         "slot": "sword"
       },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
       "minecraft:icon": "fire_sword",
       "minecraft:allow_off_hand": true,
       "minecraft:durability": {
