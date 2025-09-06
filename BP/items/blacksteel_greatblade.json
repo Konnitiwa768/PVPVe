@@ -7,10 +7,8 @@
       "icon": "textures/items/blacksteel_greatblade"
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "blacksteel_greatblade"
-      },
-      "minecraft:enchantable": {
+      "minecraft:icon": "blacksteel_greatblade",
+      "minecraft:allow_off_hand": true,minecraft:enchantable": {
         "value": 19,
         "slot": "sword"
       },
