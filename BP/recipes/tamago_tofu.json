@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vsconw:tamago_tofu"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " G ",
+      "GSG",
+      " G "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:egg"
+      },
+      "S": {
+        "item": "vsconw:tofu"
+      }
+    },
+    "result": {
+      "item": "vsconw:tamago_tofu",
+      "count": 5
+    }
+  }
+}
