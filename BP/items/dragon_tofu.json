@@ -6,9 +6,7 @@
       "category": "Equipment"
     },
     "components": {    
-      "minecraft:icon": {
-        "texture": "dragon_tofu"
-      },
+      "minecraft:icon": "dragon_tofu"
       "minecraft:display_name":{
         "value": "ドラゴンとうふ"
       },
