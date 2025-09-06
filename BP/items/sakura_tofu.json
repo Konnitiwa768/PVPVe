@@ -9,6 +9,9 @@
       "minecraft:icon": {
         "texture": "sakura_tofu"
       },
+      "minecraft:display_name":{
+        "value": "桜とうふ"
+      },
       "minecraft:use_modifiers": {
         "use_duration": 2.1,
         "movement_modifier": 0.92
