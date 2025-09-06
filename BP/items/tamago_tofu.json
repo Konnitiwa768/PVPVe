@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:tamago_tofu",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "tamago_tofu",
+      "minecraft:use_duration": 12,
+      "minecraft:food": {
+        "nutrition": 2.7,
+        "saturation_modifier": "low",
+        "can_always_eat": false,
+        "effects": [
+          {
+            "name": "regeneration",
+            "amplifier": 2,
+            "duration": 300
+          }
+        ]
+      }
+    }
+  }
+}
