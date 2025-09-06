@@ -6,6 +6,17 @@
       "category": "Equipment"
     },
     "components": {
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 5.54
+      },
+      "minecraft:display_name": {
+        "value": "雷の剣"
+      },
       "minecraft:max_stack_size": 1,
       "minecraft:hand_equipped": true,
       "minecraft:enchantable": {
@@ -21,18 +32,6 @@
         },
         "max_durability": 1561
       },
-    },
-      "minecraft:repairable": {
-        "repair_items": [
-          { "items": ["prismarine_shard"], "repair_amount": "default" }
-        ]
-      },
-      "minecraft:attack": {
-        "damage": 5.54
-      },
-    "minecraft:display_name": {
-        "value": "雷の剣"
-    },
     "events": {
       "minecraft:entity_hit": {
         "sequence": [
