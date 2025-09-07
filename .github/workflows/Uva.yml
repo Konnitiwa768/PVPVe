@@ -1,4 +1,4 @@
-name: Download & Upload PNGs on main3 Push
+name: Download & Upload PNGs on main3 Push a
 
 on:
   push:
