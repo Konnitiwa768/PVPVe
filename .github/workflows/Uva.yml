@@ -3,7 +3,7 @@ name: Download & Upload PNGs on main3 Push
 on:
   push:
     branches:
-      - main3
+      - main
 
 jobs:
   run-script:
