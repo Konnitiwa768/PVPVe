@@ -33,6 +33,7 @@ jobs:
       - name: Add and commit PNG files
         run: |
           git add *.png
+          git pull
           git commit -m "Add downloaded PNGs by workflow" || echo "No changes to commit"
 
       - name: Push changes
