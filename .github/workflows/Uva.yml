@@ -21,7 +21,9 @@ jobs:
         run: pip install requests
 
       - name: Run DAUN.py
-        run: python DAUN.py
+        run: |
+          mkdir -p sk
+          python DAUN.py
 
       - name: Set up git user
         run: |
