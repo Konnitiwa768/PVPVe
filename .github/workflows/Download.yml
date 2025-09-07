@@ -1,0 +1,40 @@
+name: Build and Update Font
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install fontTools
+        run: |
+          pip install fonttools
+          pip install --upgrade fonttools requests
+
+
+      - name: Run font edit script
+        run: python scripts/edit_font2.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull 
+          git add downloads/font2.ttf
+          git commit -m "Update Conlangg.ttf with new metadata" || echo "No changes to commit"
+          git push
