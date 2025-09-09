@@ -7,7 +7,7 @@
     },
     "components": {
       "minecraft:icon": "kusa_tofu",
-      "minecraft:display_name":{
+      "minecraft:display_name": {
         "value": "草とうふ"
       },
       "minecraft:use_modifiers": {
@@ -17,7 +17,7 @@
       "minecraft:use_animation": "eat",
       "minecraft:food": {
         "nutrition": 11.7,
-        "saturation_modifier": "8",
+        "saturation_modifier": 8,
         "can_always_eat": false,
         "effects": [
           {
