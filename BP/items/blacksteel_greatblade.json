@@ -18,7 +18,7 @@
         "value": 19,
         "slot": "sword"
       },
-      "minecraft:damage": 1561,
+      "minecraft:durability": 1561,
       "minecraft:weapon": {
         "damage": 13
       },
