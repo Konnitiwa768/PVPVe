@@ -22,7 +22,7 @@ jobs:
 
       - name: Run DAUN.py
         run: |
-          mkdir -p sk
+          mkdir -p A
           python DAUN.py
 
       - name: Set up git user
