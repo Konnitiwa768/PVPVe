@@ -32,7 +32,7 @@
           { "items": ["prismarine_shard"], "repair_amount": "default" }
         ]
       },
-    "minecraft:damage": 5.5
+    "minecraft:damage": 5.5,
     "events": {
       "minecraft:entity_hit": {
         "sequence": [
