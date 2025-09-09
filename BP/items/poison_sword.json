@@ -19,7 +19,6 @@
         ]
       },
       "minecraft:allow_off_hand": true,
-      "minecraft:allow_off_hand": true,
       "minecraft:durability": {
         "damage_chance": {
           "min": 10,
@@ -34,15 +33,12 @@
     },
     "events": {
       "minecraft:entity_hit": {
-        "sequence": [
-          {
-            "add_effect": {
-              "effect": "poison",
-              "duration": 5,
-              "amplifier": 1
-            }
-          }
-        ]
+        "run_command": {
+          "command": [
+            "tag @e[c=1,r=3] add poison_sword_target",
+            "function add_poison_effect"
+          ]
+        }
       }
     }
   }
