@@ -11,9 +11,7 @@
           { "items": ["prismarine_shard"], "repair_amount": "default" }
         ]
       },
-      "minecraft:attack": {
-        "damage": 5.54
-      },
+      "minecraft:damage": 11.14,
       "minecraft:display_name": {
         "value": "雷の剣"
       },
