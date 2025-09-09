@@ -21,6 +21,14 @@
       "minecraft:weapon": {
         "damage": 7
       },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "position": [0.2, 0, 0]
+        },
+        "off_hand": {
+          "position": [0.2, 0, 0]
+        }
+      },
       "minecraft:display_name": {
         "value": "§0黒鋼のレイピア"
       }
