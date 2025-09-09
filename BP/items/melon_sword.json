@@ -15,10 +15,9 @@
       },
       "minecraft:attack": {
         "damage": 2147483647
-      },
-      
+      },      
       "minecraft:icon": "melon_sword",
-      "minecraft:hand_equipped": true,
+      "minecraft:hand_equipped": true
     }
   }
 }
