@@ -17,7 +17,7 @@
       },
       "minecraft:icon": "blacksteel_rapier",
       "minecraft:allow_off_hand": true,
-      "minecraft:damage": 9999,
+      "minecraft:durability": 9999,
       "minecraft:weapon": {
         "damage": 7
       },
