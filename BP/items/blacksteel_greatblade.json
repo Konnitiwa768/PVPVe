@@ -7,7 +7,7 @@
     },
     "components": {
       "minecraft:icon": "blacksteel_greatblade",
-      "minecraft:allow_off_hand": true
+      "minecraft:allow_off_hand": true,
       "minecraft:repairable": {
         "repair_items": [
           { "items": ["nether_star"], "repair_amount": 625 }
@@ -21,6 +21,14 @@
       "minecraft:damage": 1561,
       "minecraft:weapon": {
         "damage": 13
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "position": [0.2, 0, 0]
+        },
+        "off_hand": {
+          "position": [0.2, 0, 0]
+        }
       },
       "minecraft:display_name": {
         "value": "§0黒鋼の大剣"
