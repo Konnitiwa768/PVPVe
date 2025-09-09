@@ -6,7 +6,7 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": "tofu"
+      "minecraft:icon": "tofu",
       "minecraft:display_name": {
         "value": "とうふ"
       },
