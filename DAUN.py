@@ -15,7 +15,7 @@ names = [
     "Re.png"
 ]
 
-download_dir = "" # ダウンロード先のディレクトリ
+download_dir = "A" # ダウンロード先のディレクトリ
 
 # ダウンロードディレクトリが存在しない場合は作成
 os.makedirs(download_dir, exist_ok=True)
