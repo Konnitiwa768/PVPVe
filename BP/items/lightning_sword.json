@@ -36,7 +36,7 @@
           {
             "run_command": {
               "command": [
-                "execute if random < 0.07 run summon creeper ~ ~ ~ minecraft:creeper ~ ~ ~ {ExplosionRadius:4,CustomName:'\"UnstableCreeper\"',powered:0}"
+                "execute if random < 0.07 run summon creeper ~ ~ ~"
               ]
             }
           },
