@@ -6,7 +6,7 @@
       "category": "Equipment"
     },
     "components": {
-      "minecraft:icon": "sakura_tofu"
+      "minecraft:icon": "sakura_tofu",
       "minecraft:display_name": {
         "value": "桜とうふ"
       },
