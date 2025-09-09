@@ -27,7 +27,7 @@
           "position": [0.2, 0, 0]
         }
       },
-      "minecraft:damage": 1061,
+      "minecraft:durability": 1061,
       "minecraft:weapon": {
         "damage": 45
       },
