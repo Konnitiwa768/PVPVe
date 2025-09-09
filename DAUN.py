@@ -11,7 +11,7 @@ urls = [
 names = [
     "Re_Maturi.png",
     "Mar.png",
-    "Re_Uwagi.png"
+    "Re_Uwagi.png",
     "Re.png"
 ]
 
