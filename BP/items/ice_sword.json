@@ -37,7 +37,7 @@
         "run_command": {
           "command": [
             "tag @e[c=1,r=3] add ice_sword_target",
-            "function add_effect"
+            "function ice_add_effect"
           ]
         }
       }
