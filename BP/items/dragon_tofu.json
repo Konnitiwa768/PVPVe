@@ -6,7 +6,7 @@
     },
     "components": {    
       "minecraft:icon": "dragon_tofu",
-      "minecraft:display_name":{
+      "minecraft:display_name": {
         "value": "ドラゴンとうふ"
       },
       "minecraft:use_modifiers": {
