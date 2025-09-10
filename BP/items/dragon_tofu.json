@@ -3,6 +3,7 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:dragon_tofu",
+      "category": "Equipment"
     },
     "components": {    
       "minecraft:icon": "dragon_tofu",
