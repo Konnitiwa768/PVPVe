@@ -18,17 +18,13 @@
       margin: 20px auto;
       max-width: 95vw;
     }
-    .gallery img {
+    canvas {
       image-rendering: pixelated; /* ドットを維持 */
       cursor: pointer;
       border: 2px solid transparent;
       background: #fff8;
-      width: auto;   /* 元サイズを維持 */
-      height: auto;
-      max-width: none; /* 縮小禁止 */
-      max-height: none;
     }
-    .gallery img:hover {
+    canvas:hover {
       border-color: red;
     }
     .selected {
@@ -37,14 +33,10 @@
     #preview {
       margin-top: 20px;
     }
-    #preview img {
+    #preview canvas {
       image-rendering: pixelated;
       border: 4px solid #000;
       background: #fff;
-      width: auto;   /* 元サイズ維持 */
-      height: auto;
-      max-width: none;
-      max-height: none;
     }
   </style>
 </head>
@@ -53,11 +45,9 @@
   <p>a/ フォルダの画像から選んでください</p>
 
   <div class="gallery" id="gallery"></div>
-
   <div id="preview"></div>
 
   <script>
-    // GitHub Pages はディレクトリ一覧を返さないので手動リスト
     const images = [
       "A/Mar.png",
       "A/Re_Maturi.png",
@@ -70,14 +60,33 @@
     const preview = document.getElementById("preview");
 
     images.forEach(src => {
-      const img = document.createElement("img");
+      const img = new Image();
       img.src = src;
-      img.addEventListener("click", () => {
-        document.querySelectorAll(".gallery img").forEach(i => i.classList.remove("selected"));
-        img.classList.add("selected");
-        preview.innerHTML = `<img src="${src}">`;
-      });
-      gallery.appendChild(img);
+      img.onload = () => {
+        // 画像ピクセルそのままのサイズでcanvas生成
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext("2d");
+        ctx.imageSmoothingEnabled = false; // アンチエイリアス禁止
+        ctx.drawImage(img, 0, 0);
+
+        canvas.addEventListener("click", () => {
+          document.querySelectorAll(".gallery canvas").forEach(c => c.classList.remove("selected"));
+          canvas.classList.add("selected");
+
+          preview.innerHTML = "";
+          const pCanvas = document.createElement("canvas");
+          pCanvas.width = img.width;
+          pCanvas.height = img.height;
+          const pCtx = pCanvas.getContext("2d");
+          pCtx.imageSmoothingEnabled = false;
+          pCtx.drawImage(img, 0, 0);
+          preview.appendChild(pCanvas);
+        });
+
+        gallery.appendChild(canvas);
+      };
     });
   </script>
 </body>
