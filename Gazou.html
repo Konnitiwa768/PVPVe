@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像選択サイト</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #eee;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+      gap: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated; /* ドット感 */
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: #222;
+    }
+    .gallery img:hover {
+      border-color: cyan;
+    }
+    .selected {
+      border-color: lime !important;
+    }
+    #preview {
+      margin-top: 20px;
+    }
+    #preview img {
+      image-rendering: pixelated;
+      width: auto;
+      max-width: 90vw;
+      max-height: 80vh;
+      border: 4px solid #555;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>画像選択サイト</h1>
+  <p>a/ フォルダの画像から選んでください</p>
+
+  <div class="gallery" id="gallery"></div>
+
+  <div id="preview"></div>
+
+  <script>
+    // 手動でファイルリストを入れる（GitHub Pagesはディレクトリ一覧を取れないため）
+    const images = [
+      "A/Mar.png",
+      "A/Re_Uwagi.png",
+      "A/Re_Maturi.png",
+      "A/Re.png"
+      // 必要に応じて追加
+    ];
+
+    const gallery = document.getElementById("gallery");
+    const preview = document.getElementById("preview");
+
+    images.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.addEventListener("click", () => {
+        document.querySelectorAll(".gallery img").forEach(i => i.classList.remove("selected"));
+        img.classList.add("selected");
+        preview.innerHTML = `<img src="${src}">`;
+      });
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>
