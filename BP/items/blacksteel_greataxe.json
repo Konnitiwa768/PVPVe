@@ -19,14 +19,6 @@
           { "items": ["netherite_ingot"], "repair_amount": 450 }
         ]
       },
-      "minecraft:render_offsets": {
-        "main_hand": {
-          "position": [0.2, 0, 0]
-        },
-        "off_hand": {
-          "position": [0.2, 0, 0]
-        }
-      },
       "minecraft:durability": 1061,
       "minecraft:weapon": {
         "damage": 45
