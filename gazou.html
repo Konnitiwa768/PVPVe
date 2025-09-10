@@ -6,41 +6,37 @@
   <style>
     body {
       font-family: sans-serif;
-      background: #00ff00;
-      color: #eee;
+      background: #ccff00; /* 黄緑 */
+      color: #111;
       text-align: center;
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 8px;
-      max-width: 800px;
-      margin: 0 auto;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 95vw;
     }
     .gallery img {
-      width: 100%;
-      height: auto;
-      image-rendering: pixelated; /* ドット感 */
+      image-rendering: pixelated; /* ドットを維持 */
       cursor: pointer;
       border: 2px solid transparent;
-      background: #00ff00;
+      background: #fff8;
     }
     .gallery img:hover {
-      border-color: cyan;
+      border-color: red;
     }
     .selected {
-      border-color: lime !important;
+      border-color: blue !important;
     }
     #preview {
       margin-top: 20px;
     }
     #preview img {
       image-rendering: pixelated;
-      width: auto;
-      max-width: 90vw;
-      max-height: 80vh;
-      border: 4px solid #555;
-      background: #00ff00;
+      border: 4px solid #000;
+      background: #fff;
     }
   </style>
 </head>
@@ -53,11 +49,11 @@
   <div id="preview"></div>
 
   <script>
-    // 手動でファイルリストを入れる（GitHub Pagesはディレクトリ一覧を取れないため）
+    // 手動でファイルリストを入れる（GitHub Pagesはディレクトリ一覧を取得できないため）
     const images = [
       "A/Mar.png",
-      "A/Re_Uwagi.png",
       "A/Re_Maturi.png",
+      "A/Re_Uwagi.png",
       "A/Re.png"
       // 必要に応じて追加
     ];
@@ -78,3 +74,4 @@
   </script>
 </body>
 </html>
+    
