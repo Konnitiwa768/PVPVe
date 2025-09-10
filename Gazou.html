@@ -23,6 +23,10 @@
       cursor: pointer;
       border: 2px solid transparent;
       background: #fff8;
+      width: auto;   /* 元サイズを維持 */
+      height: auto;
+      max-width: none; /* 縮小禁止 */
+      max-height: none;
     }
     .gallery img:hover {
       border-color: red;
@@ -37,6 +41,10 @@
       image-rendering: pixelated;
       border: 4px solid #000;
       background: #fff;
+      width: auto;   /* 元サイズ維持 */
+      height: auto;
+      max-width: none;
+      max-height: none;
     }
   </style>
 </head>
@@ -49,7 +57,7 @@
   <div id="preview"></div>
 
   <script>
-    // 手動でファイルリストを入れる（GitHub Pagesはディレクトリ一覧を取得できないため）
+    // GitHub Pages はディレクトリ一覧を返さないので手動リスト
     const images = [
       "A/Mar.png",
       "A/Re_Maturi.png",
@@ -74,4 +82,3 @@
   </script>
 </body>
 </html>
-    
