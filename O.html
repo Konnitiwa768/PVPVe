@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像選択サイト</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ccff00; /* 黄緑 */
+      color: #111;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+    .gallery img {
+      image-rendering: pixelated; /* ドットを維持 */
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: #fff8;
+      width: auto;   /* 元の幅をそのまま */
+      height: auto;  /* 元の高さをそのまま */
+      max-width: none; /* 縮小禁止 */
+      max-height: none;
+    }
+    .gallery img:hover {
+      border-color: red;
+    }
+    .selected {
+      border-color: blue !important;
+    }
+    #preview {
+      margin-top: 20px;
+    }
+    #preview img {
+      image-rendering: pixelated;
+      border: 4px solid #000;
+      background: #fff;
+      width: auto;
+      height: auto;
+      max-width: none;
+      max-height: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>画像選択サイト</h1>
+  <p>a/ フォルダの画像から選んでください</p>
+
+  <div class="gallery" id="gallery"></div>
+
+  <div id="preview"></div>
+
+  <script>
+    const images = [
+      "A/Mar.png",
+      "A/Re_Maturi.png",
+      "A/Re_Uwagi.png",
+      "A/Re.png"
+      // 必要に応じて追加
+    ];
+
+    const gallery = document.getElementById("gallery");
+    const preview = document.getElementById("preview");
+
+    images.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.addEventListener("click", () => {
+        document.querySelectorAll(".gallery img").forEach(i => i.classList.remove("selected"));
+        img.classList.add("selected");
+        preview.innerHTML = `<img src="${src}">`;
+      });
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>
