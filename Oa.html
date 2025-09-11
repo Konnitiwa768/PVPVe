@@ -20,8 +20,8 @@
     canvas {
       image-rendering: pixelated;
       cursor: pointer;
-      border: none;      /* 枠なし */
-      background: none;  /* 背景透明 */
+      border: none;
+      background: none;
     }
     #preview {
       margin-top: 20px;
@@ -41,6 +41,8 @@
   <div id="preview"></div>
 
   <script>
+    const dpr = window.devicePixelRatio || 1;
+
     // ファイルごとに元サイズを指定
     const images = [
       {src: "A/Mar.png", w: 64, h: 32},
@@ -52,26 +54,29 @@
     const gallery = document.getElementById("gallery");
     const preview = document.getElementById("preview");
 
+    function makeCanvas(img, w, h) {
+      const canvas = document.createElement("canvas");
+      canvas.width = w;     // 内部ピクセル（画像ピクセル数）
+      canvas.height = h;
+      // Fireの高DPI対策: CSS上の表示サイズを縮小
+      canvas.style.width = (w / dpr) + "px";
+      canvas.style.height = (h / dpr) + "px";
+
+      const ctx = canvas.getContext("2d");
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(img, 0, 0, w, h);
+      return canvas;
+    }
+
     images.forEach(imgData => {
       const img = new Image();
       img.src = imgData.src;
       img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = imgData.w;
-        canvas.height = imgData.h;
-        const ctx = canvas.getContext("2d");
-        ctx.imageSmoothingEnabled = false;
-        ctx.drawImage(img, 0, 0, imgData.w, imgData.h);
+        const canvas = makeCanvas(img, imgData.w, imgData.h);
 
         canvas.addEventListener("click", () => {
-          // プレビュー用キャンバス
           preview.innerHTML = "";
-          const pCanvas = document.createElement("canvas");
-          pCanvas.width = imgData.w;
-          pCanvas.height = imgData.h;
-          const pCtx = pCanvas.getContext("2d");
-          pCtx.imageSmoothingEnabled = false;
-          pCtx.drawImage(img, 0, 0, imgData.w, imgData.h);
+          const pCanvas = makeCanvas(img, imgData.w, imgData.h);
           preview.appendChild(pCanvas);
         });
 
