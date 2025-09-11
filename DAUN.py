@@ -6,13 +6,14 @@ urls = [
     "https://s.namemc.com/i/b2d476522e262ea0.png",
     "https://s.namemc.com/i/39d851b54115909d.png",
     "https://s.namemc.com/i/67d490eadf07207e.png",
-    "https://s.namemc.com/i/4c92e3982fb83efa.png"
-]
+    "https://s.namemc.com/i/4c92e3982fb83efa.png",
+    "https://s.namemc.com/i/a4290fa0b3a07c61.png"
 names = [
     "Re_Maturi.png",
     "Mar.png",
     "Re_Uwagi.png",
-    "Re.png"
+    "Re.png",
+    "Mar_Maturi.png"
 ]
 
 download_dir = "A" # ダウンロード先のディレクトリ
