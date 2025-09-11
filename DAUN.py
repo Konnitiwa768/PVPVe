@@ -8,6 +8,7 @@ urls = [
     "https://s.namemc.com/i/67d490eadf07207e.png",
     "https://s.namemc.com/i/4c92e3982fb83efa.png",
     "https://s.namemc.com/i/a4290fa0b3a07c61.png"
+]
 names = [
     "Re_Maturi.png",
     "Mar.png",
