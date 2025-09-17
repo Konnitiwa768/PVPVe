@@ -1,0 +1,55 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vsconw:reimu",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["reimu", "animal"]
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 27,
+        "max": 27
+      },
+      "minecraft:attack": {
+        "damage": 7
+      },
+      "minecraft:loot": "loot_tables/entities/vsconw_reimu.json",
+      "minecraft:movement.basic": {},
+      "minecraft:behavior.random_stroll": { "priority": 5 },
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "look_distance": 8
+      },
+      "minecraft:behavior.react_to_damage": {
+        "priority": 1,
+        "target_filter": [
+          { "test": "is_family", "subject": "other", "value": "player" }
+        ]
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 2,
+        "items": ["minecraft:white_wool", "minecraft:red_wool", "minecraft:blue_wool"],
+        "speed_multiplier": 1.2
+      },
+      "minecraft:behavior.tame": {
+        "priority": 3,
+        "tame_items": ["minecraft:white_wool", "minecraft:red_wool", "minecraft:blue_wool"]
+      },
+      "minecraft:spawn_egg": {
+        "base_color": "#ffffff",
+        "overlay_color": "#ff0000"
+      }
+    },
+    "events": {
+      "minecraft:on_tame": {
+        "add": { "component_groups": [ "tamed" ] }
+      }
+    }
+  }
+}
