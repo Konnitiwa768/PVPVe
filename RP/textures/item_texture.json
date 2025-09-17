@@ -8,6 +8,12 @@
     "ancient_sword": {
       "textures": "textures/items/ancient_sword"
     },
+    "reimu_crystal": {
+      "textures": "textures/items/reimu_crystal"
+    },
+    "reimu_blade": {
+      "textures": "textures/items/reimu_blade"
+    },
     "blacksteel_rapier": {
       "textures": "textures/items/blacksteel_rapier"
     },
