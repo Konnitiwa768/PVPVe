@@ -26,7 +26,7 @@
         "enchantable_slot": "sword",
         "enchantable_value": 10
       },
-      "minecraft:swing_duration": 30
+      "minecraft:swing_duration": 1.5
     }
   }
 }
