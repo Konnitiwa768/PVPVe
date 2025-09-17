@@ -225,3 +225,21 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
   itemComponentRegistry.registerCustomComponent("vsconw:ice_sword", ItemIceSwordComponent);
   itemComponentRegistry.registerCustomComponent("vsconw:fire_sword", ItemFireSwordComponent);
 });
+
+const MARISA_ID = "vsconw:marisa_chestplate";
+
+world.afterEvents.itemEquipped.subscribe(event => {
+    const entity = event.entity;
+    if (!entity) return;
+
+    if (event.slot.type === "slot.armor.chest") {
+        const equipped = entity.getComponent("equippable").getEquipment("chest");
+        if (equipped && equipped.typeId === MARISA_ID) {
+            // 装備中なら火炎耐性を付与
+            entity.addEffect("fire_resistance", 2147483647, { showParticles: false });
+        } else {
+            // 外した場合 → 火炎耐性を消す
+            entity.removeEffect("fire_resistance");
+        }
+    }
+});
