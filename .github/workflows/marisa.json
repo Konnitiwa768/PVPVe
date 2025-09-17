@@ -1,0 +1,48 @@
+name: Generate Leafeau Textures
+
+on:
+  push:
+    branches:
+      - main3
+      
+jobs:
+  generate_leafeau_textures:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Download Zephyr Texture
+        run: |
+          curl -O https://raw.githubusercontent.com/Mojang/bedrock-samples/main/resource_pack/textures/models/armor/diamond_1.png
+          curl -O https://raw.githubusercontent.com/Mojang/bedrock-samples/main/resource_pack/textures/models/armor/diamond_2.png
+    
+
+      - name: Prepare Output Directory
+        run: |
+          mkdir -p RP/textures/models/armor/
+
+      - name: Generate Leafeau Textures
+        run: |
+          convert diamond_1.png -fill "#FFAA00" -colorize 75% RP/textures/models/armor/marisa_layer_2.png
+          convert diamond_2.png -fill "#FFAA00" -colorize 75% RP/textures/models/armor/marisa_layer_1.png
+
+      - name: Commit and Push Changes
+        env:
+          GIT_AUTHOR_NAME: GitHub Actions
+          GIT_COMMITTER_NAME: GitHub Actions
+          GIT_AUTHOR_EMAIL: actions@github.com
+          GIT_COMMITTER_EMAIL: actions@github.com
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.SECRET_TOKEN }}@github.com/${{ github.repository }}
+
+          git add RP/textures/models/armor/marisa_layer_1.png RP/textures/models/armor/marisa_layer_2.png
+          git commit -m "Generate Leafeau textures from crystal base" || echo "No changes to commit"
+          git pull --rebase origin main3 || echo "Pull failed (likely due to conflicts or clean state)"
+          git push origin HEAD:main3
