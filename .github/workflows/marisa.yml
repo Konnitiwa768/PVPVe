@@ -3,7 +3,7 @@ name: Generate Leafeau Textures
 on:
   push:
     branches:
-      - main3
+      - main
       
 jobs:
   generate_leafeau_textures:
