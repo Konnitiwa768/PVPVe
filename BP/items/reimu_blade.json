@@ -22,11 +22,11 @@
         "parent": "itemGroup.name.sword"
       },
       "minecraft:weapon": {
-        "damage": 17,
+        "damage": 78.2,
         "enchantable_slot": "sword",
         "enchantable_value": 10
       },
-      "minecraft:swing_duration": 15
+      "minecraft:swing_duration": 30
     }
   }
 }
