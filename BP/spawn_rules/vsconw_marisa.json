@@ -1,0 +1,16 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "vsconw:marisa"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:weight": 30,
+        "minecraft:herd": { "min_size": 1, "max_size": 2 },
+        "minecraft:biome_filter": ["all"]
+      }
+    ]
+  }
+}
