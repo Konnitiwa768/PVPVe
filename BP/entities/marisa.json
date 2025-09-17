@@ -1,0 +1,45 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vsconw:marisa",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "materials": { "default": "entity_alphatest" },
+      "textures": {
+        "default": "textures/entity/marisa"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.custom"
+      },
+      "animations": {
+        "move": "animation.player.move",
+        "look_at": "animation.player.look_at"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    },
+    "components": {
+      "minecraft:type_family": { "family": ["marisa", "monster"] },
+      "minecraft:nameable": {},
+      "minecraft:health": { "value": 24, "max": 24 },
+      "minecraft:attack": {
+        "damage": 9,
+        "effect": {
+          "name": "fire",
+          "duration": 4,
+          "amplifier": 0
+        }
+      },
+      "minecraft:loot": "loot_tables/entities/vsconw_marisa.json",
+      "minecraft:movement.basic": {},
+      "minecraft:behavior.random_stroll": { "priority": 5 },
+      "minecraft:behavior.look_at_player": { "priority": 6, "look_distance": 8 },
+      "minecraft:behavior.react_to_damage": { "priority": 1 },
+      "minecraft:spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#FFD700"
+      }
+    }
+  }
+}
