@@ -1,0 +1,39 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:marisa_crystal",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "marisa_crystal",
+      "minecraft:display_name": {
+        "value": "魔理沙クリスタル"
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 5.92
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:food": {
+        "nutrition": 55,
+        "saturation_modifier": 9,
+        "can_always_eat": true,
+        "effects": [
+          {
+            "name": "regeneration",
+            "chance": 0.5,
+            "duration": 5,
+            "amplifier": 255
+          },
+          {
+            "name": "absorption",
+            "chance": 1.0,
+            "duration": 180,
+            "amplifier": 5
+          }
+        ]
+      }
+    }
+  }
+}
