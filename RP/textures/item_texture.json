@@ -14,6 +14,12 @@
     "reimu_blade": {
       "textures": "textures/items/reimu_blade"
     },
+    "marisa_crystal": {
+      "textures": "textures/items/marisa_crystal"
+    },
+    "marisa_chestplate": {
+      "textures": "textures/items/marisa_chestplate"
+    },
     "blacksteel_rapier": {
       "textures": "textures/items/blacksteel_rapier"
     },
