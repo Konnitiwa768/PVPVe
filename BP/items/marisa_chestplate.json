@@ -3,7 +3,8 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:marisa_chestplate",
-      "category": "Equipment"
+      "category": "Equipment",
+      "is_experimental": false
     },
     "components": {
       "minecraft:icon": "marisa_chestplate",
@@ -14,11 +15,6 @@
       },
       "minecraft:wearable": {
         "slot": "slot.armor.chest"
-      },
-      "minecraft:armor_effects": {
-        "effect": "fire_resistance",
-        "amplifier": 0,
-        "duration": 5
       }
     }
   }
