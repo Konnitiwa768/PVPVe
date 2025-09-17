@@ -1,0 +1,32 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vsconw:reimu_blade",
+      "category": "Equipment",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:icon": "reimu_blade",
+      "minecraft:damage": {
+        "max_damage": 1800
+      },
+      "minecraft:durability": {
+        "max_durability": 1800
+      },
+      "minecraft:hand_equipped": true,
+      "minecraft:display_name": {
+        "value": "§d霊夢ブレード"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.sword"
+      },
+      "minecraft:weapon": {
+        "damage": 17,
+        "enchantable_slot": "sword",
+        "enchantable_value": 10
+      },
+      "minecraft:swing_duration": 15
+    }
+  }
+}
