@@ -6,6 +6,7 @@
       "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": false,
+
       "materials": { "default": "entity_alphatest" },
       "textures": {
         "default": "textures/entity/marisa"
@@ -19,12 +20,15 @@
       },
       "render_controllers": [ "controller.render.default" ]
     },
+
     "components": {
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 1.8
       },
-      "minecraft:type_family": { "family": ["marisa", "monster"] },
+      "minecraft:type_family": {
+        "family": ["marisa", "monster"]
+      },
       "minecraft:nameable": {},
       "minecraft:health": { "value": 24, "max": 24 },
       "minecraft:attack": {
@@ -38,7 +42,10 @@
       "minecraft:loot": "loot_tables/entities/vsconw_marisa.json",
       "minecraft:movement.basic": {},
       "minecraft:behavior.random_stroll": { "priority": 5 },
-      "minecraft:behavior.look_at_player": { "priority": 6, "look_distance": 8 },
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "look_distance": 8
+      },
       "minecraft:behavior.react_to_damage": { "priority": 1 },
       "minecraft:spawn_egg": {
         "base_color": "#000000",
