@@ -8,7 +8,7 @@
     },
     "components": {
       "minecraft:icon": "marisa_chestplate",
-      "minecraft:durability": 987,
+      "minecraft:durability": 4096,
       "minecraft:armor": {
         "protection": 15,
         "slot": "slot.armor.chest"
