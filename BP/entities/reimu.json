@@ -21,6 +21,10 @@
       "render_controllers": [ "controller.render.default" ]
     },
     "components": {
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
       "minecraft:type_family": { "family": ["reimu", "animal"] },
       "minecraft:nameable": {},
       "minecraft:health": { "value": 27, "max": 27 },
