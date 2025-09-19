@@ -22,7 +22,7 @@
         "parent": "itemGroup.name.sword"
       },
       "minecraft:weapon": {
-        "damage": 78.2,
+        "damage": 18.2,
         "enchantable_slot": "sword",
         "enchantable_value": 10
       },
