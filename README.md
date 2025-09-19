@@ -5,7 +5,7 @@ https://konnitiwa768.github.io/PVPVe/Images/1.png
 https://web.blockbench.net
 https://aternos.org/files/packs/packs.txt
 https://gemini.google.com/app
-
+https://github.com/mojang/bedrock-samples
 
 https://konnitiwa768.github.io/PVPVe/7.html
 https://konnitiwa768.github.io/PVPVe/skin.html
