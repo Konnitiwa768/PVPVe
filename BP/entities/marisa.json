@@ -33,11 +33,8 @@
       "minecraft:health": { "value": 24, "max": 24 },
       "minecraft:attack": {
         "damage": 9,
-        "effect": {
-          "name": "fire",
-          "duration": 4,
-          "amplifier": 0
-        }
+        "effect_name": "slowness",
+        "effect_duration": 50
       },
       "minecraft:loot": "loot_tables/entities/vsconw_marisa.json",
       "minecraft:movement.basic": {},
