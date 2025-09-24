@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>画像選択サイト</title>
+<script src="https://cdn.jsdelivr.net/npm/pica@8.1.1/dist/pica.min.js"></script>
+<style>
+body { font-family: sans-serif; background: #ccff00; color: #111; text-align: center; margin:0; padding:20px;}
+.gallery { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-start; margin:0 auto;}
+canvas { image-rendering: pixelated; cursor:pointer; border:none; background:none;}
+#preview { margin-top:20px;}
+#preview canvas { image-rendering: pixelated; border:none; background:none;}
+</style>
+</head>
+<body>
+<h1>画像選択サイト</h1>
+<p>a/ フォルダの画像をクリックでプレビュー</p>
+
+<div class="gallery" id="gallery"></div>
+<div id="preview"></div>
+
+<script>
+const images = [
+  {src:"A/Mar.png", w:64, h:32},
+  {src:"A/Re.png", w:64, h:32},
+  {src:"A/Re_Maturi.png", w:64, h:64},
+  {src:"A/Re_Uwagi.png", w:64, h:64}
+];
+
+const gallery = document.getElementById("gallery");
+const preview = document.getElementById("preview");
+const picaInstance = pica(); // picaオブジェクト生成
+
+function createCanvas(img, w, h) {
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d");
+  ctx.imageSmoothingEnabled = false;
+  // picaで高精度リサイズ（今回は元サイズなのでほぼそのままコピー）
+  const tmp = document.createElement("canvas");
+  tmp.width = img.width;
+  tmp.height = img.height;
+  tmp.getContext("2d").drawImage(img,0,0);
+  return picaInstance.resize(tmp, canvas, {unsharpAmount:0, alpha:true}).then(()=>canvas);
+}
+
+images.forEach(imgData=>{
+  const img = new Image();
+  img.src = imgData.src;
+  img.onload = ()=>{
+    createCanvas(img,imgData.w,imgData.h).then(canvas=>{
+      canvas.addEventListener("click", ()=>{
+        preview.innerHTML="";
+        createCanvas(img,imgData.w,imgData.h).then(pCanvas=>preview.appendChild(pCanvas));
+      });
+      gallery.appendChild(canvas);
+    });
+  };
+});
+</script>
+</body>
+</html>
