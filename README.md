@@ -1,5 +1,5 @@
 # PVPVe
-https://outlook.com
+https://outlook.live.com
 harkioooo
 https://microsoft.com/link
 https://m.kuku.lu/recv.phpV
