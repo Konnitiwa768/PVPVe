@@ -1,3 +1,4 @@
+https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
 # PVPVe
 https://outlook.live.com
 harkioooo
