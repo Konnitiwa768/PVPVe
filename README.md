@@ -1,5 +1,6 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
 # PVPVe
+https://hapitas.jp/appinvite/?i=25545316
 https://outlook.live.com
 harkioooo
 https://www.ninja.co.jp/register/input/hash/d65f800a9fbfd6ca269185c0bb037c26dfbd7004
