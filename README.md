@@ -1,5 +1,6 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
 https://ironnasekai.fandom.com/ja
+  / discord   https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbF9DOHFfREgwZDBOTlNiX09oY2IybW1rWGV1UXxBQ3Jtc0ttSTlZaGg0MXhFdzJfZG5UdVNVTzk5NElObEd5MWVaNC1YTVVmQThIZ1AzSzRHZHNranhUVTNPQ1N0OUZCdEJlNGRxUm1zUFR5bmp3WWtHYXAteGJYX0YzMHZQUGhmMUYwN2c2bHpWSlJOd3pxTlVCYw&q=https%3A%2F%2Fdiscord.gg%2FPPnzpx6Pqq&v=4sdz5EGeyvQ
 # PVPVe
 https://hapitas.jp/appinvite/?i=25545316
 https://outlook.live.com
