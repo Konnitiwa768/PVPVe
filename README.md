@@ -2,6 +2,7 @@ https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d
 here: https://rewards.bing.com/redeem/redeemcode
 
 https://www.aayyy.com/ja
+https://www.aayyy.com/ja/minecraft
 
 https://rewards.bing.com/redeem/all
 https://ironnasekai.fandom.com/ja
