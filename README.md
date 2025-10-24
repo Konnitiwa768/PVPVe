@@ -1,4 +1,6 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
+here: https://rewards.bing.com/redeem/redeemcode
+https://rewards.bing.com/redeem/all
 https://ironnasekai.fandom.com/ja
 https://rewards.bing.com/welcome?rh=25D21AAB&ref=rafsrchae
   /   / discord   https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbUpZZXdXZkROWkkyVU9zcVNydG9pZUZwQ3RJQXxBQ3Jtc0trVGlUTFRhMk1WS1VjTjJOOC0tN2JYQWNWYjlQWXFlaTdmRWFUR0daMFAyblFXMzhBOXQtcXJYdWZac1RaYmFzYzQ1ZjFUMklpbjV5dDJKVGxSbWlPdDc0dWRkcFZ3bHRaYklqRDNSZjFCb01aMGwyYw&q=https%3A%2F%2Fdiscord.gg%2FUVewtfFgCE&v=0YIgkhZOQOc
