@@ -1,5 +1,8 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
 here: https://rewards.bing.com/redeem/redeemcode
+
+https://www.aayyy.com/ja
+
 https://rewards.bing.com/redeem/all
 https://ironnasekai.fandom.com/ja
 https://rewards.bing.com/welcome?rh=25D21AAB&ref=rafsrchae
