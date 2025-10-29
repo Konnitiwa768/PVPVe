@@ -1,6 +1,7 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
 here: https://rewards.bing.com/redeem/redeemcode
 https://tekscha.pages.dev/
+https://bingapp.microsoft.com/bing?adjust=1mvyt97t_1mzjfafn
 https://www.aayyy.com/ja
 https://www.aayyy.com/ja/minecraft
 Verify Email
