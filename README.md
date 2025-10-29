@@ -3,7 +3,8 @@ here: https://rewards.bing.com/redeem/redeemcode
 https://tekscha.pages.dev/
 https://www.aayyy.com/ja
 https://www.aayyy.com/ja/minecraft
-
+Verify Email
+https://account.mongodb.com/account/verify/email/konnitiwaa1%40outlook.jp/105acf2846c69db1278d4c4f481a65c14ed878724cc58d8d169c2fde2418a0b5/redirect?state=stateNonce%3D3c924e32-dad9-4c12-9b9d-cdd312f02b2a%26signupSource%3Dwww.mongodb.com%252Fja-jp%252Fcloud%252Fatlas%252Fregister%26signupMethod%3Dform%26isNewAccountUser%3Dtrue%26nds%3Dtrue%26userId%3D6901dad8ae4ca36c3b8418b6%26n%3D%252Faccount%252Fregister%252Fsuccess
 https://rewards.bing.com/redeem/all
 https://ironnasekai.fandom.com/ja
 https://rewards.bing.com/welcome?rh=25D21AAB&ref=rafsrchae
