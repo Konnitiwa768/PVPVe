@@ -1,6 +1,6 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
-[https://mcrfta.pages.dev/rewpot/img/mirror2.png](https://rayfoldings.com/show.php?cl=true&l=1754142&u=31325&id=71163&url=http%3A%2F%2Frayfoldings.com%2F1754142)
-https://justpaste.it/ls/dgxvr/ti2vu0kfurf8h192
+[[https://mcrfta.pages.dev/rewpot/img/mirror2.png](https://rayfoldings.com/show.php?cl=true&l=1754142&u=31325&id=71163&url=http%3A%2F%2Frayfoldings.com%2F1754142)
+https://justpaste.it/ls/dgxvr/ti2vu0kfurf8h192](https://www.liveappsearch.com/cl/i/ndro4k)
 https://justpaste.it/redirect/dgxvr/https%3A%2F%2Fmcrfta.pages.dev%2Frewpot%2F
 here: https://rewards.bing.com/redeem/redeemcode
 https://tekscha.pages.dev/
