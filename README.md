@@ -1,4 +1,5 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
+https://mcrfta.pages.dev/rewpot/img/mirror2.png
 https://justpaste.it/ls/dgxvr/ti2vu0kfurf8h192
 https://justpaste.it/redirect/dgxvr/https%3A%2F%2Fmcrfta.pages.dev%2Frewpot%2F
 here: https://rewards.bing.com/redeem/redeemcode
