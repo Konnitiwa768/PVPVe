@@ -11,17 +11,24 @@
       "minecraft:durability": {
         "max_durability": 1800
       },
+      "minecraft:repairable": {
+        "repair_items": [
+          { "items": ["prismarine_shard"], "repair_amount": "default" }
+        ]
+      },
       "minecraft:hand_equipped": true,
       "minecraft:display_name": {
         "value": "§d霊夢ブレード"
+      },
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "sword"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.sword"
       },
       "minecraft:weapon": {
-        "damage": 18.2,
-        "enchantable_slot": "sword",
-        "enchantable_value": 10
+        "damage": 18.2
       },
       "minecraft:swing_duration": 1.5
     }
