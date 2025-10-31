@@ -1,5 +1,6 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
 こちらから参加することができます
+https://api-project-244148761871.firebaseapp.com/__/auth/handler?apiKey=AIzaSyAsWBYAxTfgu6lDBB3d2Gyk2zJUoW5X1BU&appName=%5BDEFAULT%5D&authType=signInViaPopup&redirectUrl=https%3A%2F%2Fadventar.org%2Fcalendars%2F11295&v=9.14.0&eventId=6954731381&providerId=github.com
 https://adventar.org/calendars/11295
 https://www.mediafire.com/file/2w6tfzcapfgo6ia/misery%2528hik5k%2529.mcpack/file?dkey=470pw9bjdlk&r=697
 [[https://mcrfta.pages.dev/rewpot/img/mirror2.png]
