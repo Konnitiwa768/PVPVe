@@ -8,9 +8,6 @@
     },
     "components": {
       "minecraft:icon": "reimu_blade",
-      "minecraft:damage": {
-        "max_damage": 1800
-      },
       "minecraft:durability": {
         "max_durability": 1800
       },
