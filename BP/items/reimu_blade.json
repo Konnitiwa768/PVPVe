@@ -27,9 +27,7 @@
       "minecraft:creative_category": {
         "parent": "itemGroup.name.sword"
       },
-      "minecraft:weapon": {
-        "damage": 18.2
-      },
+      "minecraft:damage": 18.2,
       "minecraft:swing_duration": 1.5
     }
   }
