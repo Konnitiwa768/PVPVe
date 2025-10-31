@@ -1,4 +1,6 @@
 https://galoo.jp/promotion_index_blank5.html?fid=5003252&ic=7313837c9f641029ec0d1564c57f45fa
+こちらから参加することができます
+https://adventar.org/calendars/11295
 https://www.mediafire.com/file/2w6tfzcapfgo6ia/misery%2528hik5k%2529.mcpack/file?dkey=470pw9bjdlk&r=697
 [[https://mcrfta.pages.dev/rewpot/img/mirror2.png]
 https://rayfoldings.com/show.php?cl=true&l=1754142&u=31325&id=71163&url=http%3A%2F%2Frayfoldings.com%2F1754142
