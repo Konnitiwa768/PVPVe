@@ -5,7 +5,7 @@ https://api-project-244148761871.firebaseapp.com/__/auth/handler?apiKey=&appName
 https://api-project-244148761871.firebaseapp.com/__/auth/handler?apiKey=AIzaSyAsWBYAxTfgu6lDBB3d2Gyk2zJUoW5X1BU&appName=%5BDEFAULT%5D&authType=signInViaPopup&redirectUrl=https%3A%2F%2Fadventar.org%2Fcalendars%2F11295&v=9.14.0&eventId=6954731381&providerId=github.com
 https://adventar.org/calendars/11295
 https://www.mediafire.com/file/2w6tfzcapfgo6ia/misery%2528hik5k%2529.mcpack/file?dkey=470pw9bjdlk&r=697
-[[https://mcrfta.pages.dev/rewpot/img/mirror2.png]
+https://mcrfta.pages.dev/rewpot/
 https://rayfoldings.com/show.php?cl=true&l=1754142&u=31325&id=71163&url=http%3A%2F%2Frayfoldings.com%2F1754142
 https://justpaste.it/ls/dgxvr/ti2vu0kfurf8h192
 (https://www.liveappsearch.com/cl/i/ndro4k)
