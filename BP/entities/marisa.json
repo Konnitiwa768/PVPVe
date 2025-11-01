@@ -18,7 +18,9 @@
         "move": "animation.player.move",
         "look_at": "animation.player.look_at"
       },
-      "render_controllers": [ "controller.render.default" ]
+      "render_controllers": [
+        "controller.render.entity_alphatest"
+      ]
     },
 
     "components": {
@@ -43,7 +45,7 @@
         "priority": 6,
         "look_distance": 8
       },
-      "minecraft:behavior.react_to_damage": { "priority": 1 },
+      "minecraft:behavior.react_to_damage": { "priority": 0 },
       "minecraft:spawn_egg": {
         "base_color": "#000000",
         "overlay_color": "#FFD700"
