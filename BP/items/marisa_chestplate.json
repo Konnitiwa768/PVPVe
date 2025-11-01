@@ -3,18 +3,16 @@
   "minecraft:item": {
     "description": {
       "identifier": "vsconw:marisa_chestplate",
-      "category": "Equipment",
-      "is_experimental": false
+      "category": "equipment"
     },
     "components": {
       "minecraft:icon": "marisa_chestplate",
-      "minecraft:durability": 4096,
-      "minecraft:armor": {
-        "protection": 15,
-        "slot": "slot.armor.chest"
+      "minecraft:durability": {
+        "max_durability": 4096
       },
       "minecraft:wearable": {
-        "slot": "slot.armor.chest"
+        "slot": "slot.armor.chest",
+        "protection": 15
       }
     }
   }
