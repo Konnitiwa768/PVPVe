@@ -3,8 +3,7 @@
   "minecraft:item": {
     "description": {
       "identifier": "vscow:blacksteel_greataxe",
-      "category": "Equipment",
-      "icon": "textures/items/blacksteel_greataxe"
+      "category": "Equipment"
     },
     "components": {
       "minecraft:max_stack_size": 1,
