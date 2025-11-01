@@ -72,7 +72,7 @@
         "speed_multiplier": 1.2
       },
       "minecraft:tameable": {
-        "probability": 1.0,  /* テイム成功確率（1.0 = 100%） */
+        "probability": 1.0,
         "tame_items": [
           "minecraft:white_wool",
           "minecraft:red_wool",
