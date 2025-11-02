@@ -15,6 +15,7 @@
           { "items": ["prismarine_shard"], "repair_amount": "default" }
         ]
       },
+      "minecraft:max_stack_size": 1,
       "minecraft:icon": "blacksteel_rapier",
       "minecraft:allow_off_hand": true,
       "minecraft:durability": 9999,
