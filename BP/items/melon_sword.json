@@ -9,9 +9,11 @@
       "minecraft:durability": {
         "max_durability": 1
       },
+      "minecraft:display_name": {
+        "value": "メロンの剣"
+      },
       "minecraft:damage": 2147483647,   
       "minecraft:icon": "melon_sword",
-      "minecraft:hand_equipped": true
     }
   }
 }
