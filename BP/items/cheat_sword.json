@@ -11,7 +11,6 @@
         "value": "§6どうの剣"
       },
       "minecraft:max_stack_size": 1,
-      "minecraft:hand_equipped": true,
       "minecraft:damage": 2147483647,
       "minecraft:durability": {
         "max_durability": 176
@@ -23,8 +22,7 @@
       "minecraft:cooldown": {
         "category": "sword",
         "duration": 0.6
-      },
-      "minecraft:render_offsets": "tool"
+      }, 
     }
   }
 }
