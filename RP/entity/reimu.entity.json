@@ -10,7 +10,7 @@
         "default": "textures/entity/reimu"
       },
       "geometry": {
-        "default": "geometry.humanoid"
+        "default": "geometry.humanoid.custom"
       },
       "animations": {
         "move": "animation.player.move",
