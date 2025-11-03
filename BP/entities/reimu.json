@@ -13,7 +13,7 @@
         "default": "textures/entity/reimu"
       },
       "geometry": {
-        "default": "geometry.humanoid"
+        "default": "geometry.humanoid.custom"
       },
       "scripts": {},
       "animations": {
@@ -51,17 +51,6 @@
       "minecraft:behavior.look_at_player": {
         "priority": 6,
         "look_distance": 8
-      },
-      "minecraft:behavior.react_to_damage": {
-        "priority": 1,
-        "target_filter": [
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "player"
-          }
-        ]
-      },
       "minecraft:behavior.tempt": {
         "priority": 2,
         "items": [
