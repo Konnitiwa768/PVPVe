@@ -19,9 +19,7 @@
         "slot": "sword"
       },
       "minecraft:durability": 1561,
-      "minecraft:weapon": {
-        "damage": 13
-      },
+      "minecraft:damage": 13,
       "minecraft:display_name": {
         "value": "§0黒鋼の大剣"
       }
