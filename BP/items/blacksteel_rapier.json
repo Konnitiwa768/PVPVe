@@ -19,9 +19,7 @@
       "minecraft:icon": "blacksteel_rapier",
       "minecraft:allow_off_hand": true,
       "minecraft:durability": 9999,
-      "minecraft:weapon": {
-        "damage": 7
-      },
+      "minecraft:damage": 7,
       "minecraft:display_name": {
         "value": "§0黒鋼のレイピア"
       }
