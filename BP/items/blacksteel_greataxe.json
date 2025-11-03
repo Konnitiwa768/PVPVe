@@ -19,9 +19,7 @@
         ]
       },
       "minecraft:durability": 1061,
-      "minecraft:weapon": {
-        "damage": 45
-      },
+      "minecraft:damage": 45,
       "minecraft:display_name": {
         "value": "§0黒鋼の大斧"
       }
