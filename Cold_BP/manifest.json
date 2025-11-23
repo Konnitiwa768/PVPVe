@@ -1,0 +1,62 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "氷アドオン",
+    "description": "氷世界だ！",
+    "uuid": "e12586a6-f5b8-41d9-b04f-80002109cbdb",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "f287fd51-22fa-4040-89d3-0a2deb3cfaca",
+      "entry": "scripts/main.js",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "description": "氷世界だ！",
+      "type": "data",
+      "uuid": "335d1c30-2f11-4ce1-bd15-96aa515a6d33",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "a8ecb14a-6023-45b0-a501-6974f8a0aac2",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ],
+  "capabilities": [
+    "script_eval"
+  ]
+}
