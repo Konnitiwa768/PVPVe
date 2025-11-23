@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "氷アドオン",
+    "description": "氷世界だ！",
+    "uuid": "a8ecb14a-6023-45b0-a501-6974f8a0aac2",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Resources",
+      "type": "resources",
+      "uuid": "7de8dfd1-5557-437a-a0d0-09a78e8c59e8",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "e12586a6-f5b8-41d9-b04f-80002109cbdb",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
