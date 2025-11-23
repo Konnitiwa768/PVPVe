@@ -2,8 +2,6 @@ name: Download and Upload Bedrock Samples
 
 on:
   workflow_dispatch:  # 手動実行
-  schedule:
-    - cron: '0 12 * * *'  # 毎日12時に自動実行（任意で削除可）
 
 jobs:
   download_and_upload:
