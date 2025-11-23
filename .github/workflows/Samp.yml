@@ -1,0 +1,41 @@
+name: Download and Upload Bedrock Samples
+
+on:
+  workflow_dispatch:  # 手動実行
+  schedule:
+    - cron: '0 12 * * *'  # 毎日12時に自動実行（任意で削除可）
+
+jobs:
+  download_and_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Bedrock Samples zip
+        run: |
+          curl -L -o bedrock-samples.zip https://github.com/Mojang/bedrock-samples/archive/refs/tags/v1.21.120.4.zip
+
+      - name: Unzip Bedrock Samples
+        run: |
+          unzip bedrock-samples.zip -d bedrock-samples
+          rm bedrock-samples.zip
+
+      - name: Move extracted files to repository root (optional)
+        run: |
+          mv bedrock-samples/bedrock-samples-1.21.120.4/* .
+          rm -rf bedrock-samples
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update Bedrock samples v1.21.120.4"
+            git push
+          fi
