@@ -3,7 +3,7 @@ name: Filter Nautilus Files and Commit
 on:
   push:
     branches:
-      - main
+      - main2
   workflow_dispatch:
 
 jobs:
