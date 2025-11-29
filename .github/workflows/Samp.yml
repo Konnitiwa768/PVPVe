@@ -38,14 +38,17 @@ jobs:
           cp -r "$SRC"/documentation/* ./documentation/
           cp -r "$SRC"/metadata/* ./metadata/
 
-      - name: Commit and push changes (zip excluded)
+      - name: Commit and push changes (force merge)
         run: |
-          # 念のため zip を削除してコミット対象から外す
           rm -f bedrock-samples.zip
 
           git add behavior_pack resource_pack documentation metadata
-          git pull
+
           git commit -m "Update Bedrock samples v1.21.130.28-preview" \
             || git commit --allow-empty -m "Force commit: no changes"
 
-          git push origin HEAD:main
+          # 強制マージで無理やり push
+          git fetch origin main
+          git merge origin/main --allow-unrelated-histories -m "Force merge remote main"
+
+          git push origin HEAD:main --force
