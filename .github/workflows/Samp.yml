@@ -1,6 +1,9 @@
 name: Download and Upload Bedrock Samples
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -20,10 +23,6 @@ jobs:
         run: |
           unzip bedrock-samples.zip
           rm bedrock-samples.zip
-
-      - name: Move extracted files to repository root
-        run: |
-          mv bedrock-samples-1.21.130.28-preview/* .
 
       - name: Commit and push changes
         run: |
