@@ -74,7 +74,6 @@ jobs:
           git add NBP NRP
 
           git commit -m "Add filtered Nautilus packs NBP and NRP"
-          強制マージで無理やり push
           git fetch origin main
           git merge origin/main --allow-unrelated-histories -m "Force merge remote main"
 
