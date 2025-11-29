@@ -44,7 +44,7 @@ jobs:
           rm -f bedrock-samples.zip
 
           git add behavior_pack resource_pack documentation metadata
-
+          git pull
           git commit -m "Update Bedrock samples v1.21.130.28-preview" \
             || git commit --allow-empty -m "Force commit: no changes"
 
