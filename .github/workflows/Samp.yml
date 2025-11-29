@@ -3,7 +3,7 @@ name: Download and Upload Bedrock Samples
 on:
   push:
     branches:
-      - main
+      - main2
   workflow_dispatch:
 
 jobs:
