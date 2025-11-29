@@ -1,0 +1,73 @@
+name: Filter Nautilus Files and Commit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  filter_and_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create output folders
+        run: |
+          mkdir -p NBP
+          mkdir -p NRP
+
+      - name: Copy matching files from behavior_pack to NBP
+        run: |
+          cd behavior_pack
+          find . -type f -path "*nautilus*" -exec bash -c 'mkdir -p "../NBP/$(dirname "$1")"; cp "$1" "../NBP/$1"' _ {} \;
+
+      - name: Copy matching files from resource_pack to NRP
+        run: |
+          cd resource_pack
+          find . -type f -path "*nautilus*" -exec bash -c 'mkdir -p "../NRP/$(dirname "$1")"; cp "$1" "../NRP/$1"' _ {} \;
+
+      - name: Create manifest.json for NBP
+        run: |
+          echo '{' > NBP/manifest.json
+          echo '  "format_version": 2,' >> NBP/manifest.json
+          echo '  "header": {' >> NBP/manifest.json
+          echo '    "description": "Filtered behavior pack for Nautilus files",' >> NBP/manifest.json
+          echo '    "name": "NBP",' >> NBP/manifest.json
+          echo '    "uuid": "11111111-2222-3333-4444-555555555555",' >> NBP/manifest.json
+          echo '    "version": [1,0,0],' >> NBP/manifest.json
+          echo '    "min_engine_version": [1,16,0]' >> NBP/manifest.json
+          echo '  },' >> NBP/manifest.json
+          echo '  "modules": [{' >> NBP/manifest.json
+          echo '    "description": "Filtered behavior files module",' >> NBP/manifest.json
+          echo '    "type": "data",' >> NBP/manifest.json
+          echo '    "uuid": "66666666-7777-8888-9999-000000000000",' >> NBP/manifest.json
+          echo '    "version": [1,0,0]' >> NBP/manifest.json
+          echo '  }]' >> NBP/manifest.json
+          echo '}' >> NBP/manifest.json
+
+      - name: Create manifest.json for NRP
+        run: |
+          echo '{' > NRP/manifest.json
+          echo '  "format_version": 2,' >> NRP/manifest.json
+          echo '  "header": {' >> NRP/manifest.json
+          echo '    "description": "Filtered resource pack for Nautilus files",' >> NRP/manifest.json
+          echo '    "name": "NRP",' >> NRP/manifest.json
+          echo '    "uuid": "22222222-3333-4444-5555-666666666666",' >> NRP/manifest.json
+          echo '    "version": [1,0,0],' >> NRP/manifest.json
+          echo '    "min_engine_version": [1,16,0]' >> NRP/manifest.json
+          echo '  },' >> NRP/manifest.json
+          echo '  "modules": [{' >> NRP/manifest.json
+          echo '    "description": "Filtered resource files module",' >> NRP/manifest.json
+          echo '    "type": "resources",' >> NRP/manifest.json
+          echo '    "uuid": "77777777-8888-9999-0000-111111111111",' >> NRP/manifest.json
+          echo '    "version": [1,0,0]' >> NRP/manifest.json
+          echo '  }]' >> NRP/manifest.json
+          echo '}' >> NRP/manifest.json
+
+      - name: Commit and push filtered packs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add NBP NRP
+          git commit -m "Add filtered Nautilus packs NBP and NRP"
+          git push
