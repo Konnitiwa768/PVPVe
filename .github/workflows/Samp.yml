@@ -28,12 +28,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
           git add .
           git pull
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Update Bedrock samples v1.21.130.28-preview"
-            git push
-          fi
+          git commit -m "Update Bedrock samples v1.21.130.28-preview"
+          git push
+  
