@@ -1,7 +1,7 @@
 name: Download and Upload Bedrock Samples
 
 on:
-  workflow_dispatch:  # 手動実行
+  workflow_dispatch:
 
 jobs:
   download_and_upload:
@@ -13,17 +13,18 @@ jobs:
 
       - name: Download Bedrock Samples zip
         run: |
-          curl -O https://github.com/Mojang/bedrock-samples/archive/refs/tags/v1.21.130.28-preview.zip
+          curl -L -o bedrock-samples.zip \
+            https://github.com/Mojang/bedrock-samples/archive/refs/tags/v1.21.130.28-preview.zip
 
       - name: Unzip Bedrock Samples
         run: |
-          unzip bedrock-samples.zip -d bedrock-samples
+          unzip bedrock-samples.zip
           rm bedrock-samples.zip
 
-      - name: Move extracted files to repository root (optional)
+      - name: Move extracted files to repository root
         run: |
-          mv bedrock-samples/bedrock-samples-1.21.120.4/* .
-          rm -rf bedrock-samples
+          mv bedrock-samples-1.21.130.28-preview/* .
+          rm -rf bedrock-samples-1.21.130.28-preview
 
       - name: Commit and push changes
         run: |
@@ -34,6 +35,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update Bedrock samples v1.21.120.4"
+            git commit -m "Update Bedrock samples v1.21.130.28-preview"
             git push
           fi
