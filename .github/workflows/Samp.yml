@@ -24,7 +24,6 @@ jobs:
       - name: Move extracted files to repository root
         run: |
           mv bedrock-samples-1.21.130.28-preview/* .
-          rm -rf bedrock-samples-1.21.130.28-preview
 
       - name: Commit and push changes
         run: |
