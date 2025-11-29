@@ -19,9 +19,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Pull latest
-        run: git pull origin main
-
       - name: Download Bedrock Samples zip
         run: |
           curl -L -o bedrock-samples.zip \
@@ -34,15 +31,21 @@ jobs:
         run: |
           SRC="bedrock-samples-1.21.130.28-preview"
 
-          # 上書きコピー（既存ファイルは上書き、ないものは追加）
+          mkdir -p behavior_pack resource_pack documentation metadata
+
           cp -r "$SRC"/behavior_pack/* ./behavior_pack/
           cp -r "$SRC"/resource_pack/* ./resource_pack/
           cp -r "$SRC"/documentation/* ./documentation/
           cp -r "$SRC"/metadata/* ./metadata/
 
-      - name: Commit and push changes
+      - name: Commit and push changes (zip excluded)
         run: |
-          git add behavior_pack resource_pack
-          git pull
-          git commit -m "Update Bedrock samples v1.21.130.28-preview" || echo "No changes to commit"
-          git push
+          # 念のため zip を削除してコミット対象から外す
+          rm -f bedrock-samples.zip
+
+          git add behavior_pack resource_pack documentation metadata
+
+          git commit -m "Update Bedrock samples v1.21.130.28-preview" \
+            || git commit --allow-empty -m "Force commit: no changes"
+
+          git push origin HEAD:main
