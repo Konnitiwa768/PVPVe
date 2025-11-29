@@ -1,0 +1,16 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Filtered resource pack for Nautilus files",
+    "name": "NRP",
+    "uuid": "22222222-3333-4444-5555-666666666666",
+    "version": [1,0,0],
+    "min_engine_version": [1,16,0]
+  },
+  "modules": [{
+    "description": "Filtered resource files module",
+    "type": "resources",
+    "uuid": "77777777-8888-9999-0000-111111111111",
+    "version": [1,0,0]
+  }]
+}
