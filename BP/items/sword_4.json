@@ -9,7 +9,7 @@
     "components": {
       "minecraft:icon": "sword_4",
       "minecraft:durability": {
-        "max_durability": 1650
+        "max_durability": 2650
       },
       "minecraft:repairable": {
         "repair_items": [
