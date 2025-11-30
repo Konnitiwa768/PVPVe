@@ -8,6 +8,18 @@
     "ancient_sword": {
       "textures": "textures/items/ancient_sword"
     },
+    "sword_1": {
+      "textures": "textures/items/sword_1"
+    },
+    "sword_2": {
+      "textures": "textures/items/sword_2"
+    },
+    "sword_3": {
+      "textures": "textures/items/sword_3"
+    },
+    "sword_4": {
+      "textures": "textures/items/sword_4"
+    },
     "reimu_crystal": {
       "textures": "textures/items/reimu_crystal"
     },
