@@ -22,17 +22,16 @@ jobs:
       - name: Convert zombie.png to frost.png
         run: |
           mkdir -p RP/textures/entity/zombie
-          magick resource_pack/textures/entity/zombie/zombie.png \
-                 -modulate 100,140,200 \
-                 RP/textures/entity/zombie/frost.png
+          convert resource_pack/textures/entity/zombie/zombie.png \
+                  -modulate 100,140,200 \
+                  RP/textures/entity/zombie/frost.png
 
       - name: Commit frost.png
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git pull
-
           git add RP/textures/entity/zombie/frost.png
+          git pull
           git commit -m "Add generated frost zombie texture" || echo "No changes to commit"
           git push
