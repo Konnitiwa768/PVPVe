@@ -1,4 +1,4 @@
-name: Generate Frost Zombie 
+name: Generate Frost Zombie
 
 on:
   push:
@@ -19,12 +19,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Convert zombie.png to frost.png with 75% blue overlay
+      - name: Convert zombie.png to frost.png with 75% blue fill overlay
         run: |
           mkdir -p RP/textures/entity/zombie
           convert resource_pack/textures/entity/zombie/zombie.png \
-                  \( -size 100%x100% xc:"#80C0FF" \) \
-                  -alpha on -compose over -define compose:args=75% -composite \
+                  -fill "#80C0FF" -colorize 75% \
                   RP/textures/entity/zombie/frost.png
 
       - name: Commit frost.png
@@ -34,5 +33,5 @@ jobs:
 
           git add RP/textures/entity/zombie/frost.png
           git pull
-          git commit -m "Add generated frost zombie texture with 75% blue overlay" || echo "No changes to commit"
+          git commit -m "Add generated frost zombie texture with 75% blue fill overlay" || echo "No changes to commit"
           git push
