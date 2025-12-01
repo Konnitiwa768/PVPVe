@@ -19,13 +19,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Convert zombie.png to frost.png
+      - name: Convert zombie.png to frost.png with 75% blue overlay
         run: |
           mkdir -p RP/textures/entity/zombie
-          # 元画像に水色レイヤーを上乗せ
           convert resource_pack/textures/entity/zombie/zombie.png \
                   \( -size 100%x100% xc:"#80C0FF" \) \
-                  -compose overlay -composite \
+                  -alpha on -compose over -define compose:args=75% -composite \
                   RP/textures/entity/zombie/frost.png
 
       - name: Commit frost.png
@@ -35,5 +34,5 @@ jobs:
 
           git add RP/textures/entity/zombie/frost.png
           git pull
-          git commit -m "Add generated frost zombie texture" || echo "No changes to commit"
+          git commit -m "Add generated frost zombie texture with 75% blue overlay" || echo "No changes to commit"
           git push
