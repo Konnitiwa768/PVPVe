@@ -1,4 +1,4 @@
-name: Generate Frost Zombie
+name: Generate Frost Zombie 
 
 on:
   push:
