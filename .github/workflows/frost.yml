@@ -22,8 +22,10 @@ jobs:
       - name: Convert zombie.png to frost.png
         run: |
           mkdir -p RP/textures/entity/zombie
+          # 元画像に水色レイヤーを上乗せ
           convert resource_pack/textures/entity/zombie/zombie.png \
-                  -modulate 100,140,200 \
+                  \( -size 100%x100% xc:"#80C0FF" \) \
+                  -compose overlay -composite \
                   RP/textures/entity/zombie/frost.png
 
       - name: Commit frost.png
