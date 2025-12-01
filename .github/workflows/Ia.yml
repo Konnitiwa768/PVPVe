@@ -1,0 +1,36 @@
+name: Generate Frost Zombie
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  make_frost:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Convert zombie.png to frost.png (light cyan tone)
+        run: |
+          SRC="resource_pack/textures/entity/zombie/zombie.png"
+          DST="RP/textures/entity/zombie/frost.png"
+          mkdir -p "$(dirname "$DST")"
+          # 色相を青寄りにし、彩度少し上げ、水色感を強化
+          magick "$SRC" -modulate 100,140,200 "$DST"
+
+      - name: Commit frost.png
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add RP/textures/entity/zombie/frost.png
+          git commit -m "Add generated frost zombie texture" || echo "No changes to commit"
+          git push
