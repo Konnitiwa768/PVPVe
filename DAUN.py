@@ -18,7 +18,7 @@ names = [
     "Mar.png",
     "Re_Uwagi.png",
     "Re.png",
-    "Mar_Maturi.png"
+    "Mar_Maturi.png",
     "kena.png",
     "Kenaso.png"
 ]
