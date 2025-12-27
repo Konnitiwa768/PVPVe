@@ -1,33 +1,200 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>PVPVe Pack ダウンロード</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      text-align: center;
-      padding: 50px;
-    }
-    a.download {
-      display: inline-block;
-      padding: 15px 25px;
-      background: #0078d7;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-    a.download:hover {
-      background: #005fa3;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>人口ピラミッド</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .controls {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  table {
+    margin: 0 auto 10px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    text-align: center;
+  }
+
+  svg {
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+
+  .male { fill: #4a90e2; }
+  .female { fill: #e26aa2; }
+
+  .axis {
+    stroke: #000;
+    stroke-width: 1;
+  }
+
+  .grid {
+    stroke: #ccc;
+    stroke-dasharray: 2 2;
+  }
+
+  button {
+    margin: 3px;
+  }
+
+  input[type="text"] {
+    width: 80px;
+  }
+
+  input[type="number"] {
+    width: 60px;
+  }
+</style>
 </head>
 <body>
-  <h1>PVPVe Pack</h1>
-  <p>Minecraft に追加するには下のボタンを押してください。</p>
-  <a class="download" href="packs.mcaddon">ダウンロード</a>
+
+<h1 id="titleText">人口ピラミッド</h1>
+
+<div class="controls">
+  タイトル：
+  <input type="text" id="titleInput" value="人口ピラミッド">
+  <br><br>
+
+  総人口：
+  <input type="number" id="totalPop" value="1000000">
+
+  メモリ最大値：
+  <input type="number" id="maxScale" value="80000">
+  <br><br>
+
+  <button onclick="addRow()">行を追加</button>
+  <button onclick="draw()">再描画</button>
+  <button onclick="downloadPNG()">画像ダウンロード</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>年齢階級</th>
+      <th>男性 %</th>
+      <th>女性 %</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+  <tbody id="inputs"></tbody>
+</table>
+
+<svg id="chart" width="720" height="420"></svg>
+
+<script>
+const inputBody = document.getElementById("inputs");
+
+function addRow(age = "", male = 5, female = 5) {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td><input type="text" value="${age}"></td>
+    <td><input type="number" value="${male}"></td>
+    <td><input type="number" value="${female}"></td>
+    <td><button onclick="this.parentElement.parentElement.remove()">×</button></td>
+  `;
+  inputBody.appendChild(tr);
+}
+
+// 初期行
+["0-9","10-19","20-29","30-39","40-49","50-59","60-69","70-79","80+"]
+  .forEach(a => addRow(a));
+
+function draw() {
+  const svg = document.getElementById("chart");
+  svg.innerHTML = "";
+
+  const title = document.getElementById("titleInput").value;
+  document.getElementById("titleText").textContent = title;
+
+  const total = Number(document.getElementById("totalPop").value);
+  const maxScale = Number(document.getElementById("maxScale").value);
+
+  const width = 720;
+  const height = 420;
+  const centerX = width / 2;
+  const rows = [...inputBody.querySelectorAll("tr")];
+  const barHeight = 26;
+
+  // グリッドと目盛
+  for (let i = 0; i <= 5; i++) {
+    const value = maxScale / 5 * i;
+    const offset = value / maxScale * 260;
+
+    svg.innerHTML += `
+      <line x1="${centerX + offset}" y1="30" x2="${centerX + offset}" y2="${height-20}" class="grid"/>
+      <line x1="${centerX - offset}" y1="30" x2="${centerX - offset}" y2="${height-20}" class="grid"/>
+      <text x="${centerX + offset + 2}" y="20">${Math.round(value)}</text>
+      <text x="${centerX - offset - 40}" y="20">${Math.round(value)}</text>
+    `;
+  }
+
+  svg.innerHTML += `<line x1="${centerX}" y1="25" x2="${centerX}" y2="${height-15}" class="axis"/>`;
+
+  rows.forEach((row, i) => {
+    const age = row.children[0].firstChild.value;
+    const maleP = Number(row.children[1].firstChild.value);
+    const femaleP = Number(row.children[2].firstChild.value);
+
+    const male = total * maleP / 100;
+    const female = total * femaleP / 100;
+
+    const maleW = male / maxScale * 260;
+    const femaleW = female / maxScale * 260;
+
+    const y = 50 + i * barHeight;
+
+    svg.innerHTML += `
+      <rect x="${centerX - maleW}" y="${y}" width="${maleW}" height="18" class="male"/>
+      <rect x="${centerX}" y="${y}" width="${femaleW}" height="18" class="female"/>
+      <text x="${centerX - 300}" y="${y+14}">${age}</text>
+    `;
+  });
+}
+
+function downloadPNG() {
+  const svg = document.getElementById("chart");
+  const data = new XMLSerializer().serializeToString(svg);
+
+  const canvas = document.createElement("canvas");
+  canvas.width = svg.clientWidth;
+  canvas.height = svg.clientHeight;
+
+  const ctx = canvas.getContext("2d");
+  const img = new Image();
+
+  img.onload = () => {
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
+    const a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
+    a.download = "population_pyramid.png";
+    a.click();
+  };
+
+  img.src = "data:image/svg+xml;base64," +
+    btoa(unescape(encodeURIComponent(data)));
+}
+
+draw();
+</script>
+
 </body>
 </html>
