@@ -9,58 +9,26 @@
     background: #f5f5f5;
     padding: 20px;
   }
-
-  h1 {
-    text-align: center;
-  }
-
-  .controls {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
+  h1 { text-align: center; }
+  .controls { text-align: center; margin-bottom: 10px; }
   table {
     margin: 0 auto 10px auto;
     border-collapse: collapse;
   }
-
   th, td {
     border: 1px solid #ccc;
     padding: 4px 6px;
     text-align: center;
   }
-
   svg {
     display: block;
     margin: 0 auto;
     background: #fff;
     border: 1px solid #ccc;
   }
-
-  .male { fill: #4a90e2; }
-  .female { fill: #e26aa2; }
-
-  .axis {
-    stroke: #000;
-    stroke-width: 1;
-  }
-
-  .grid {
-    stroke: #ccc;
-    stroke-dasharray: 2 2;
-  }
-
-  button {
-    margin: 3px;
-  }
-
-  input[type="text"] {
-    width: 80px;
-  }
-
-  input[type="number"] {
-    width: 60px;
-  }
+  button { margin: 3px; }
+  input[type="text"] { width: 80px; }
+  input[type="number"] { width: 60px; }
 </style>
 </head>
 <body>
@@ -118,7 +86,16 @@ function addRow(age = "", male = 5, female = 5) {
 
 function draw() {
   const svg = document.getElementById("chart");
-  svg.innerHTML = "";
+  svg.innerHTML = `
+    <style>
+      .male { fill: #4a90e2; }
+      .female { fill: #e26aa2; }
+      .axis { stroke: #000; stroke-width: 1; }
+      .grid { stroke: #ccc; stroke-dasharray: 2 2; }
+      text { font-size: 12px; fill: #000; }
+    </style>
+    <rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+  `;
 
   const title = document.getElementById("titleInput").value;
   document.getElementById("titleText").textContent = title;
@@ -132,7 +109,7 @@ function draw() {
   const rows = [...inputBody.querySelectorAll("tr")];
   const barHeight = 26;
 
-  // グリッドと目盛
+  // グリッド・目盛
   for (let i = 0; i <= 5; i++) {
     const value = maxScale / 5 * i;
     const offset = value / maxScale * 260;
@@ -180,8 +157,6 @@ function downloadPNG() {
   const img = new Image();
 
   img.onload = () => {
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0);
     const a = document.createElement("a");
     a.href = canvas.toDataURL("image/png");
@@ -189,7 +164,8 @@ function downloadPNG() {
     a.click();
   };
 
-  img.src = "data:image/svg+xml;base64," +
+  img.src =
+    "data:image/svg+xml;base64," +
     btoa(unescape(encodeURIComponent(data)));
 }
 
